@@ -14,7 +14,6 @@ public class set_1016 {
 //        for(String data : Arrays.asList("a","b","d","c")){
 //         hashset.add(data);
 //         linkedHashSet.add(data);
-
 //         treeSet.add(data);
 //        }
 //        System.out.println("hashset:"+hashset);  //有序指的是存取的顺序一致  hashset不保证有序，结果虽然可能有序但是不可依赖

@@ -87,8 +87,6 @@ public static boolean Find(int target, int [][] array) {
         System.out.println(string);
     }
 }
-
-
 //class Demo extends SuperClass {
 //    String s = "this";
 //    public static void main (String[] args) {
