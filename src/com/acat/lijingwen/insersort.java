@@ -85,6 +85,7 @@ public static boolean Find(int target, int [][] array) {
        // System.out.println(length);
         String string=insersort.replaceSpace();
         System.out.println(string);
+
     }
 }
 //class Demo extends SuperClass {
