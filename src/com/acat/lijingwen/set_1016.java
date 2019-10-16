@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
-
 public class set_1016 {
 //三个set的比较
 //    public static void main (String []args){
@@ -15,6 +14,7 @@ public class set_1016 {
 //        for(String data : Arrays.asList("a","b","d","c")){
 //         hashset.add(data);
 //         linkedHashSet.add(data);
+
 //         treeSet.add(data);
 //        }
 //        System.out.println("hashset:"+hashset);  //有序指的是存取的顺序一致  hashset不保证有序，结果虽然可能有序但是不可依赖

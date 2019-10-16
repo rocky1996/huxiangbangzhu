@@ -1,7 +1,6 @@
 package com.acat.lijingwen;
 
 import javax.swing.*;
-
 public class insersort {
 //直接插入排序
     public static void insert(int R[], int n){
@@ -65,6 +64,7 @@ public static boolean Find(int target, int [][] array) {
     return result;
 }
     //剑指offer字符串的替换
+
     public static String replaceSpace() {
 
         String str ="acb*db de";
@@ -87,3 +87,24 @@ public static boolean Find(int target, int [][] array) {
         System.out.println(string);
     }
 }
+
+
+//class Demo extends SuperClass {
+//    String s = "this";
+//    public static void main (String[] args) {
+//        new Demo();
+//    }
+//
+//    void display(String s){
+//        System.out.println("this: "+ s);
+//    }
+//    Demo(){
+//        super.display(s);
+//    }
+//}
+//class SuperClass {
+//    String s = "super";
+//    void display( String s){
+//        System.out.println("super:" + s);
+//    }
+//}

@@ -6,10 +6,10 @@ List 有arraylist  vector  linkedlist
 Map :hashtable   linkedhashmap     hashmap  treemap
 linkedList 既可以实现Queue接口也可以实现list接口。Queue接口窄化了对linkedlist的方法的访问权限，（参数类型是queeu就完全只能访问queue接口所定义的方法，而不能直接访问linkelist的非queue方法）
 Sortedset是个接口，它里面（只有treeset这一个实现可用）的元素有一定顺序
-
 List有序可重复
 Arraylist
 优点：底层数据结构是数组  查询快增删慢
+
 缺点：线程不安全，效率好
 Vector
 优点：底层数据结构是数组  查询快 增删慢
