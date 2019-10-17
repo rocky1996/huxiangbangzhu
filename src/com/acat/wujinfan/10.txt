@@ -10,4 +10,22 @@
 2019.10.17:
     修复异步素材库拍摄接口的Toast提示信息,
     买了一本书《Effective Java中文版》,
-    对一个初创公司"小年糕"有好感，是做互联网拍摄的.
+    对一个初创公司"小年糕"有好感，是做互联网拍摄的,
+    踩坑:
+    1.post两种传参方式之比较
+    <1>
+    @PostMapping("/v1/addPhotos")
+    public RestResult<Object> addPhotos(Map<String,Object> addPhotosMap){}
+    <2>
+    @PostMapping("/v1/addPhotos")
+    public RestResult<Object> addPhotos(@RequestBody AddPhotosDto addPhotosDto){}
+
+    @Date
+    public class AddPhotosDto{
+        private String name;
+        private String address;
+        private String createTime;
+    }
+    结论:第二种方式会更安全一些。
+    2.返回数组，集合，map时候，如果是空的，也不要返回null,就返回一个空的数组，集合就可以了。
+    3.x.equals(y),x的位置是常量，y的位置是变量，这样的位置对比会更安全一些。
