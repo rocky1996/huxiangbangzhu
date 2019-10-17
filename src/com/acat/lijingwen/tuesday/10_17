@@ -1,0 +1,138 @@
+***********************************************
+java IO
+***********************************************
+1.讲讲 IO 里面的常见类，字节流、字符流、接口、实现类、方法阻塞。
+(1)文件流  fileInputStream/fileoutputstream(操作的是字节流)  fileReader/fileWriter（操作的是字符流）都会直接操作文件流 直接与os底层交互  亦被称节点流。在使用这几个刘的对象之后需要关闭流对象，因为java垃圾回收不会主动回收java7后在try{}打开流最后程序会自动关闭流对象。
+(2)包装流:printStream/printwriter/scanner
+Printstream 可以封装直接与文件交互的姐电流对象outputstream,使得编程人员可以忽略设备底层的差异，进行一直的IO操作。因此这种流也称为处理流或者包装流。
+Printwriter除了可以包装字节流outputstream之外还能包装字符流writer
+scanner可以包装键盘输入，方便将键盘输入的内容转换成我们想要的数据类型
+(3)字符串流stringreader  stringwriter
+这两个操作的是专门操作string字符串的流，其中stringReader能从string中方便的读取数据并保存到char数组，而stringwriter则将字符串类型的数据写入到stringbuffer中  （因为string不可写）
+(4)转换流：InputstreamReader/outputStreamReader
+这两个类可以将字节流转换成字符流，在读取键盘输入（system.In）和我那个或网络通信的时候需要使用这两个类
+(5)缓冲流：bufferreader/bufferwriter   bufferInputstream/bufferoutputstream
+没有经过buffered处理的IO，意味着每一次读和写的请求都会由OS底层直接处理，这会导致非常低效的问题。
+经过buffered处理过的输入流将会从一个buffer内存区域读取数据，本地API只会在buffer空了之后才会被调用。
+Bufferedreader/bufferedwriter可以将字节流reader包装成缓冲流  这是最常见用的做法。
+Bufferreader提供一个readline（）可以方便地读取一行，而fileinputstream和filereader只能读取一个字节或者一个字符    因而bufferedreader被成为行读取器。
+应用场景：fileinputstream/fileoutputstream需要逐个字节处理原始二进制的时候哦使用效率低
+Filereader/filewriter需要逐个处理字符时
+Stringreader/stringwriter需要处理字符串的时候，可以将字符串保存为字符数组
+Printstream/printwriter用来包装fileoutputstream对象方便自己接将string字符串写入文件
+Scanner 用来包装System.in流方便的将输入的string字符串转换成需要的数据类型
+InputStreamReader/outputStreamReader  自结合字符转换  网络通信或处理键盘输入
+BufferedReader/bufferwriter bufferinputstream/bufferedoutputstream 缓冲流用来包装字节流或者字符流提升IO性能，bufferedReader 还可以方便地读取一行，简化编号
+2.讲讲 NIO。
+先说说BIO：银行职员处理每次来一个请求  就分配到线程池中由一个线程职员处理，如果超出了线程池的最大上限就会扔到队列等待。
+NIO：思想： 分而治之，将事件的流程拆分为几大任务，专门的人负责专门的任务
+MainReactor线程 subReactor线程 work线程
+mainReactor线程负责监听server socket，accept新连接，并将建立的socket分派给subReactor；subReactor可以是一个线程，也可以是线程池（一般可以设置为CPU核数），负责多路分离已连接的socket，读写网络数据，这里的读写网络数据可类比顾客填表这一耗时动作，对具体的业务处理功能，其扔给worker线程池完成。
+不同的线程干专业的事情 最终每个线程都没空着 系统吞吐量就上去了
+
+NIO+异步的方式能让少量的线程（资源）做大量的事情，这适用于很多应用场景，比如代理服务、api服务、长连接服务等等，这些应用如果用同步方式将耗费大量机器资源。尽管NIO+异步能提高系统吞吐量，但其并不能让一个请求的等待时间下降，相反可能会增加等待时间。
+3.String 编码 UTF-8 和 GBK 的区别?
+utf-8是一种国际化标准的文字编码   windows将utf-8转Unicode   GBK存在是为中国而创造
+GBK的文字编码是双字节来表示的  即不论中英字符均使用双字节来表示 只不过为区别中文将其最高位设定为1
+UTF-8对于中文使用24位三字节   英文使用8位一个字节
+GBK包含全部中文字符
+UTF-8则包含全世界所有国家需要用到的字符
+GBK格式的文档在国外打开会乱码
+utf-8格式的文档在国外打开不会乱码
+GBK编码方式的编码是以中国国情而创造的，在国际上的兼容性不好，这也是为什么大多数的网页是使用UTF-8编码而不是GBK。
+4.什么时候使用字节流、什么时候使用字符流?
+InputStream 和OutputStream,两个是为字节流设计的,主要用来处理字节或二进制对象,
+Reader和 Writer.两个是为字符流（一个字符占两个字节）设计的,主要用来处理字符或字符串.
+5.递归读取文件夹下的文件，代码怎么实现
+思想：使用到了listfile（）这个函数返回一个文件路径数组
+创建文件数组 然后判断取到的文件是不是为空
+非空如果是文件直接输出文件名   使用文件对象调用getName（）方法
+或者是文件目录则调用自身递归得出文件
+
+
+***********************************************
+网络通信
+***********************************************
+1.http 是无状态通信，http 的请求方式有哪些，可以自己定义新的请求方式么。
+http请求常用的有post get head
+HTTP1.0定义了三种请求方法： GET, POST 和 HEAD方法。
+HTTP1.1新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法。
+（1）Get请求返回以URL形式表示的资源，当用户输入一个简单的URL时，就是使用GET请求，（query String格式：     http://ip:port?name=zhangsan&pwd=123456说白了就是键值对）
+Get请求可以发送query string代表URL编码字符串的实际意义
+（2）post请求则将表单置入web服务器中，发送消息到公告板，新闻组，邮件列表或者其他机构中。或者为数据处理机制提供诸如提交表单后的结果等数据。Post请求由web服务器决定，依赖于URL所指向的应用程序
+Get post的区别：他俩底层都市TCP  get产生一个TCP数据包  post产生两个TCP数据包
+对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；
+而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。
+get不可以代替post
+ 据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。但不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。
+/*
+GET在浏览器回退时是无害的，而POST会再次提交请求。
+GET产生的URL地址可以被Bookmark，而POST不可以。
+GET请求会被浏览器主动cache，而POST不会，除非手动设置。
+GET请求只能进行url编码，而POST支持多种编码方式。
+GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。
+GET请求在URL中传送的参数是有长度限制的，而POST么有。
+对参数的数据类型，GET只接受ASCII字符，而POST没有限制。
+GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。
+GET参数通过URL传递，POST放在Request body中。
+*/
+GET： 请求指定的页面信息，并返回实体主体。
+HEAD： 只请求页面的首部。
+POST： 请求服务器接受所指定的文档作为对所标识的URI的新的从属实体。
+PUT： 从客户端向服务器传送的数据取代指定的文档的内容。
+DELETE： 请求服务器删除指定的页面。
+OPTIONS： 允许客户端查看服务器的性能。
+TRACE： 请求服务器在响应中的实体主体部分返回所得到的内容。
+PATCH： 实体中包含一个表，表中说明与该URI所表示的原内容的区别。
+MOVE： 请求服务器将指定的页面移至另一个网络地址。
+COPY： 请求服务器将指定的页面拷贝至另一个网络地址。
+LINK： 请求服务器建立链接关系。
+UNLINK： 断开链接关系。
+WRAPPED： 允许客户端发送经过封装的请求。
+Extension-mothed：在不改动协议的前提下，可增加另外的方法。
+2.socket 通信，以及长连接，分包，连接异常断开的处理。
+
+从图中可以知道socket是应用与TCP/IP协议族通信的中间软件抽象层，将复杂的TCP/ip协议隐藏在socket接口后面，对用户来说一组简单的接口就是全部，让socket去组织数据以符合指定的协议
+Socket保证了不同计算机之间的通信也就是网络通信，
+3.socket 通信模型的使用，AIO 和 NIO。
+BIO  AIO  NIO
+Bio一个链接一个线程
+4. socket 框架 netty 的使用，以及 NIO 的实现原理，为什么是异步非阻塞。
+5. 同步和异步，阻塞和非阻塞。
+6. OSI 七层模型，包括 TCP,IP 的一些基本知识
+物数网运会表应
+
+TCP/ip即传输控制协议/网间协议 是一个工业标准的协议集，它是为广域网设计的
+6.http 中，get post 的区别
+Get post的区别：他俩底层都市TCP  get产生一个TCP数据包  post产生两个TCP数据包
+对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；
+而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。
+get不可以代替post
+ 据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。但不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。
+/*
+GET在浏览器回退时是无害的，而POST会再次提交请求。
+GET产生的URL地址可以被Bookmark，而POST不可以。
+GET请求会被浏览器主动cache，而POST不会，除非手动设置。
+GET请求只能进行url编码，而POST支持多种编码方式。
+GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。
+GET请求在URL中传送的参数是有长度限制的，而POST么有。
+对参数的数据类型，GET只接受ASCII字符，而POST没有限制。
+GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。
+GET参数通过URL传递，POST放在Request body中。
+*/
+GET： 请求指定的页面信息，并返回实体主体。
+HEAD： 只请求页面的首部。
+POST： 请求服务器接受所指定的文档作为对所标识的URI的新的从属实体。
+8. 说说 http,tcp,udp 之间关系和区别。
+
+UDP：是与TCP相对应的协议 用户数据报协议  属于TCP/IP协议中de一种
+9. 说说浏览器访问http://www.taobao.com，经历了怎样的过程。
+10. HTTP 协议、 HTTPS 协议，SSL 协议及完整交互过程；
+11. tcp 的拥塞，快回传，ip 的报文丢弃
+12. https 处理的一个过程，对称加密和非对称加密
+13. head 各个特点和区别
+树(前序后序中序遍历)，平衡二叉树，二叉查找树，并做拓展，B/B+树，红黑树
+树的先序遍历：根左右
+树的中序遍历：左根右
+树的后序遍历：左右根
+代码见class
