@@ -29,3 +29,15 @@
     结论:第二种方式会更安全一些。
     2.返回数组，集合，map时候，如果是空的，也不要返回null,就返回一个空的数组，集合就可以了。
     3.x.equals(y),x的位置是常量，y的位置是变量，这样的位置对比会更安全一些。
+
+2019.10.18:
+    1.Java检查型异常和非检查型异常,运行时异常和非运行时异常:
+        (1)Java检查型异常(checked execption):编辑器要求你必须处置的错误,Java中不是RuntimeException派生的Exception都是检查型异常，函数声明的，必须try...catch...,或者throw Exception
+        (2)Java非检查型异常(unchecked exception):编辑器不要求处置的错误,Java中RuntimeException派生的都是非检查型异常，可以不用throws,常见的有NullPointException,ClassCastException,
+        IndexOutOfBoundsException(数组越界错误),VirtualMachineError(OutOfMemoryError(内存溢出),StackOverflowError(盏溢出),InternalError(Jvm内部错误),UnknowError(未知错误))
+        (3)Java运行时异常:RuntimeException类及其子类异常,如空指针,数组越界等
+        (4)Java非运行时异常:RuntimeExceptione类及其子类，如IOException,SQLException等
+    2.代码中开异步线程的应用场景
+    3.JSON字符串更适合存到mongodb里面
+    4.下午4点-6点,参加部门1028版本的review code会议
+    5.学习redisTemplate.executePipelined,管道方法
