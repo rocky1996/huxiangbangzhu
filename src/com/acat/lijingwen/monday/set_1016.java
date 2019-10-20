@@ -1,4 +1,4 @@
-package com.acat.lijingwen;
+package com.acat.lijingwen.monday;
 
 import java.util.Arrays;
 import java.util.HashSet;

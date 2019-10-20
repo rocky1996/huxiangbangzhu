@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="monday task1">
+    <list default="true" id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/Thursday/10_20" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/Thursday/acceptUDP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/Thursday/sendUDP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/monday/insersort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/monday/monday.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/monday/set_1016.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/insersort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/insersort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/monday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/monday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/set_1016.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/set_1016.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/insersort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/monday.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/set_1016.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1SJQnt3OhCpobT8jLwKuaXTGVND" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\huxiangbangzhu\src\com\acat\lijingwen\monday" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -25,6 +63,81 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.BuildThread">
+    <configuration name="BuildThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.wednesday.BuildThread" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.wednesday.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.Demo" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="offer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.wednesday.offer" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.wednesday.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="order" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.tuesday.order" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.tuesday.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="recursive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.tuesday.recursive" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.tuesday.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BuildThread" />
+        <item itemvalue="Application.order" />
+        <item itemvalue="Application.recursive" />
+        <item itemvalue="Application.Demo" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -35,7 +148,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571227876158</updated>
-      <workItem from="1571227881727" duration="1034000" />
+      <workItem from="1571227881727" duration="7175000" />
+      <workItem from="1571279419306" duration="14767000" />
+      <workItem from="1571360028484" duration="11571000" />
+      <workItem from="1571453286021" duration="3909000" />
     </task>
     <task id="LOCAL-00001" summary="monday task1">
       <created>1571228479929</created>
@@ -44,18 +160,58 @@
       <option name="project" value="LOCAL" />
       <updated>1571228479929</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="monday task2">
+      <created>1571229000163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571229000163</updated>
+    </task>
+    <task id="LOCAL-00003" summary="monday fenzhi">
+      <created>1571234190903</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571234190903</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TUESDAY 未完成">
+      <created>1571314774482</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571314774483</updated>
+    </task>
+    <task id="LOCAL-00005" summary="wednesday  task">
+      <created>1571405931486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571405931487</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -63,6 +219,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="monday task1" />
-    <option name="LAST_COMMIT_MESSAGE" value="monday task1" />
+    <MESSAGE value="monday task2" />
+    <MESSAGE value="monday fenzhi" />
+    <MESSAGE value="TUESDAY 未完成" />
+    <MESSAGE value="wednesday  task" />
+    <option name="LAST_COMMIT_MESSAGE" value="wednesday  task" />
   </component>
 </project>
