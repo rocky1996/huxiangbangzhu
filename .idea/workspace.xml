@@ -1,17 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="monday task1">
+    <list default="true" id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/insersort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/insersort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/monday.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/monday.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/set_1016.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/set_1016.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/mysql.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="66" lean-forward="true" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/create_wenjian.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/mianshiti.txt" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/os&amp;jvm.txt" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/biji.txt" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/mysql.sh" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/create_wenjian.sh" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1190" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="acat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="acat" type="462c0819:PsiDirectoryNode" />
+              <item name="lijingwen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="acat" type="462c0819:PsiDirectoryNode" />
+              <item name="wujinfan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="acat" type="462c0819:PsiDirectoryNode" />
+              <item name="wujinfan" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -44,8 +147,60 @@
       <option name="project" value="LOCAL" />
       <updated>1571228479929</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="晚上参加思享汇，心得">
+      <created>1571669978413</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571669978413</updated>
+    </task>
+    <task id="LOCAL-00003" summary="10.22日，修改数据库字段名，参加需求二审">
+      <created>1571734840981</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571734840981</updated>
+    </task>
+    <task id="LOCAL-00004" summary="添加笔记到git中，读取方便">
+      <created>1571735116644</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571735116644</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="834" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42424244" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -55,7 +210,28 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -63,6 +239,67 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="monday task1" />
-    <option name="LAST_COMMIT_MESSAGE" value="monday task1" />
+    <MESSAGE value="晚上参加思享汇，心得" />
+    <MESSAGE value="10.22日，修改数据库字段名，参加需求二审" />
+    <MESSAGE value="添加笔记到git中，读取方便" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加笔记到git中，读取方便" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/notes/mianshiti.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-522">
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/notes/os&amp;jvm.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6035">
+          <caret line="355" selection-start-line="355" selection-end-line="355" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/notes/biji.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28441">
+          <caret line="1673" selection-start-line="1673" selection-end-line="1673" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/CountDownLatch/CountDownDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/CountDownLatch/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/mysql.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="66" lean-forward="true" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/create_wenjian.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
