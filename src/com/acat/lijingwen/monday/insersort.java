@@ -1,6 +1,5 @@
-package com.acat.lijingwen;
+package com.acat.lijingwen.monday;
 
-import javax.swing.*;
 public class insersort {
 //直接插入排序
     public static void insert(int R[], int n){
