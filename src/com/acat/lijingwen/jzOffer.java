@@ -48,7 +48,7 @@ public class jzOffer {
 
 //半成品想法 好像倒置想错了
 
-  public static int minNumberInRotateArray(int [] array) {
+  /*public static int minNumberInRotateArray(int [] array) {
       //进行倒置
       int b=array.length/2;
       for(int i=0;i<array.length;i++){
@@ -89,9 +89,9 @@ public class jzOffer {
           return array[(array.length)/2+1];
       }
 
-  }
+  }*/
 //大佬想法
-    public static int minNumberInRotateArray1(int [] array) {
+    /*public static int minNumberInRotateArray1(int [] array) {
         int i = 0, j = array.length - 1;
         while (i < j) {
             if (array[i] < array[j]) {
@@ -111,5 +111,46 @@ public class jzOffer {
       int[] array={1,2,3,4,5};
       int a=minNumberInRotateArray(array);
       System.out.println("a="+a);
-  }
+  }*/
+
+/*    public static int feibo(int n){
+        int [] array=new int[39];
+        array[0]=1;
+        array[1]=1;
+        for (int i=2;i<n;i++){
+            array[i]=array[i-1]+array[i-2];
+        }
+        if (n==0) {
+            return 0;
+        }else if(n==1||n==2){
+            return 1;
+        }else {
+            return array[n-1];
+        }
+    }
+    public static void main(String [] args){
+        int a=5;
+        int key=feibo(a);
+        System.out.println(key);
+    }*/
+
+//在你面前有一个n阶的楼梯，你一步只能上1阶或2阶。
+//请问计算出你可以采用多少种不同的方式爬完这个楼梯。
+
+    //这个只有百分之40的通过率    why？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+    public static int JumpFloor(int target) {
+        if(target==0)
+            return 0;
+        if(target==1)
+            return 1;
+        if(target==2)
+            return 2;
+        return(JumpFloor(target-1)+JumpFloor(target-2));
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int b=sc.nextInt();
+        int result=JumpFloor(b);
+        System.out.println(result);
+    }
 }
