@@ -57,3 +57,30 @@
     1.修改1028版本数据库素材库表中的img_isAll字段为img_is_all字段,符合公司命名标准。
     2.参加1204版本的需求二审会议的课中环节等。
     3.添加学长笔记到git目录中。
+    4.开始步入系统学习shell脚本中。
+
+2019.10.23:
+    1.整理postman工具，对接口打上标签，便于下次是调接口使用。
+    2.重新整理点名互动的逻辑,端上发起互动,然后通知服务端,服务端再通知pad端，来回进行指令的的穿梭
+    3.重新整理springboot整合MongoDB的细节:
+    <1>.@Document(collection = "表名")
+        @CompoundIndexes({  //索引
+            @CompoundIndex(name = "cc_oio_index",def="{'cc':1,'oio':1}")
+        })
+    <2>.Query query = new Query();
+        query.addCriteria(Criteria.where("aa").is(aa)).addCriteria(Criteria.where("aa").is(aa));
+        mongoTemplate.find(query,Object.class);
+    <3>.Query query = new Query();
+        query.addCriteria(Criteria.where("aa").is(aa)).addCriteria(Criteria.where("aa").is(aa));
+
+        Update update = new Update();
+        update.set("ins",dede);
+        mongoTemplate.updateFirst(query,update,Object.class);
+    3.分片瓦解项目中的知识点:
+    <1>.websocket与https的区别:
+        (1)http链接分为短连接和长连接，短连接是每次请求都要三次握手才能发送自己的信息，即每一个request对应一个response。长连接是在一定的期限内保持链接，保持TCPL链接不断开，
+        客户端和服务端通信，必须要有客户端发起请求然后服务端返回结果，客户端是主动的，服务端是被动的。
+        (2)websocket是为了解决客户端发起多个http请求到服务器资源浏览器必须要经过多长时间的轮训问题而生的，他经过多路复用，他是全双工通信，在websocket协议下服务端和客户端可以同时发送消息。
+        建立了websocket之后的服务器不必再浏览器发送request请求后才能发送消息到浏览器，这时的服务器已有主动权什么时候发就可以发送消息到浏览器。而且信息当中不必在带有head的部分信息了与http
+        的长连接通信来说，这种方式，不仅能降低服务器的压力，而且信息当中也减少了部分多余的信息。
+    4.一会下班回去小区跑圈，做操去
