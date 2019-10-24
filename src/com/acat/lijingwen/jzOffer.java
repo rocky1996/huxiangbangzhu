@@ -2,7 +2,7 @@ package com.acat.lijingwen;
 
 import java.util.Scanner;
 import java.util.Stack;
-
+import java.lang.Math;
 public class jzOffer {
 
   /*  //用两个栈来实现一个队列
@@ -138,7 +138,7 @@ public class jzOffer {
 //请问计算出你可以采用多少种不同的方式爬完这个楼梯。
 
     //这个只有百分之40的通过率    why？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
-    public static int JumpFloor(int target) {
+/*    public static int JumpFloor(int target) {
         if(target==0)
             return 0;
         if(target==1)
@@ -152,5 +152,81 @@ public class jzOffer {
         int b=sc.nextInt();
         int result=JumpFloor(b);
         System.out.println(result);
+    }*/
+//    一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
+    //大佬思路，小弟没有思路  想的超级复杂
+    /*
+    * 大佬说   最终目标爬到第n阶台阶，所以底下的台阶经过亦或是不经过那就随意了  所以底下每一级台阶就是1  或是0  两种可能   有n-1阶台阶所以就是  2^(n-1)种可能
+    * */
+ /*   public static  void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入跳到几级台阶");
+        int target=sc.nextInt();
+        int result=biantaitaijie(target);
+        System.out.println(result);
+
     }
+    public static int biantaitaijie(int target){
+        if (target<=0)
+            return 0;
+        return (int)Math.pow(2,target-1);
+    }*/
+
+
+    /*
+    * 我们可以用2*1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
+    * 看完人家的解析发现还是和青蛙跳的问题  然后就  嗯。。。。。醉了人家好牛逼
+    * */
+
+   /*    public static  void main(String [] args){
+     Scanner sc = new Scanner(System.in);
+        System.out.println("请输入用n个2*1的小矩形");
+        int target=sc.nextInt();
+        int result=RectCover(target);
+        System.out.println(result);
+
+        int  a =13;
+        jinzhirecover(a);
+
+    }
+
+   */
+/*
+    public static int RectCover(int target) {
+        if(target==0)
+            return 0;
+        if(target==1)
+            return 1;
+        if(target==2)
+            return 2;
+        return(RectCover(target-1)+RectCover(target-2));
+    }
+*/
+
+/*
+* 进制的转化   十进制转二进制  并计算其一的个数
+*
+* */
+public  static void jinzhirecover(int number){
+    int [] num=new int[8];
+    boolean flag=true;
+    int i=0;
+    while(flag){
+
+       num[i]=number%2;
+       number=number/2;
+       if (number==1||number==0){
+
+           break;
+       }
+    }
+    for(int j=num.length-1;j>=0;j--){
+        System.out.println(num[j]);
+    }
+  }
+    public static  void main(String [] args){
+         int a=173;
+        jinzhirecover(a);
+    }
+
 }
