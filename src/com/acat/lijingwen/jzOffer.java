@@ -205,9 +205,9 @@ public class jzOffer {
 
 /*
 * 进制的转化   十进制转二进制  并计算其一的个数
-*
+*代码错误  10-25继续
 * */
-public  static void jinzhirecover(int number){
+/*public  static void jinzhirecover(int number){
     int [] num=new int[8];
     boolean flag=true;
     int i=0;
@@ -226,7 +226,82 @@ public  static void jinzhirecover(int number){
   }
     public static  void main(String [] args){
          int a=173;
-        jinzhirecover(a);
+//        jinzhirecover(a);
+       int result = jinzhi(a);
+        System.out.println(result);
+    }*/
+
+    /*大佬思想   将n与flag进行与操作初始的flag是1  每次与操作后将flag左移1  因为1的二进制位0000001
+    然后每次左移就会1向前进行移动   这样就可以检查n中到底有几个1了   */
+/*   public   static int jinzhi(int n){
+       int count=0;
+       int flag=1;
+       while(flag!=0){
+           if((n & flag)!=0){
+               count++;
+           }
+           flag = flag <<1;
+       }
+       return  count;
+   }*/
+/*给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。
+保证base和exponent不同时为0   (终于自己搞好了一道题)*/
+  /*  public double Power(double base, int exponent) {
+        if((base!=0)||(exponent!=0))
+        {
+            double result=Math.pow(base,exponent);
+            return result;
+        }
+        else {
+            return 0;
+        }
+    }*/
+
+  /*
+  * 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，
+  * 使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，
+  * 并保证奇数和奇数，偶数和偶数之间的相对位置不变。
+  * 0是偶数 虽然下面的代码跑通了  但是自己给自己找到了bug  在这里没有考虑0的问题    若数组里面没有0   下面的算法就没问题0
+  * */
+    public static void reOrderArray(int[] array) {
+        int temp=0;
+        int array1[] = new int[array.length];
+        int array2[] = new int[array.length];
+        for(int i=0;i<array.length;i++){
+            if(array[i]%2==0){
+                array1[i]=array[i];
+            }else{
+                array2[i]=array[i];
+            }
+        }
+        int k=0;
+        for (int j=0;j<array.length;j++){
+            if(array2[j]!=0){
+                array[k]=array2[j];
+                k++;
+            }
+        }
+        int p=k;
+        for (int j=0;j<array.length;j++){
+            if(array1[j]!=0){
+                array[p]=array1[j];
+                p++;
+            }
+        }
+        for (int j=0;j<array.length;j++){
+            System.out.println(array[j]);
+        }
+    }
+    /**
+     * 上述问题改良版算法
+     *
+     * */
+    public static void updatereOrderArray(int array[]){
+
+    }
+    public static void main(String []args){
+        int []array={0,1,0};
+        reOrderArray(array);
     }
 
 }

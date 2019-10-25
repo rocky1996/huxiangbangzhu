@@ -1,0 +1,182 @@
+*******************************************************************************
+零碎的知识(加分项)，Redis/Mongodb/es/kafka/hive/k8s，最起码弄懂redis/mongodb，(写demo，研究使用场景)，熟悉主从复制，分布式存储思想
+*******************************************************************************
+Redis 和MongoDB比较
+实现语言：
+指标	MongoDB	Redis	比较说明
+实现语言	C++	C/C++
+协议	BSON  自定义二进制	类Telnet
+性能	依赖内存  TPS较高（每秒系统能够处理的交易或事物的数量）	依赖内存  TPS非常高
+R》M
+可操作性	丰富的数据表达。索引，最类似于关系数据库，支持丰富的查询语言	数据丰富  较少IO	M》R
+
+内存及存储	适合大量数据存储，依赖系统虚拟内存管理，采用镜像文件存储；内存占有率比较高，官方建议独立部署在64位系统  （32位有最大2.5G文件限制）	Redis2.0后增加虚拟内存特性，突破物理内存限制；数据看可以设置时效性，类似于memcache	各有优势
+可用性	支持master-slave,replicaset(内部采用paxos选举算法，自动故障恢复)auto  sharding  机制，对客户端屏蔽了故障转移和切分机制	依赖于客户端来实现分布式读写，主从复制时，每次从节点重新连接主节点都要依赖整个快照，无增量复制；不支持自动sharding，需要依赖程序设定一直hash机制	M》R;单点问题上，MongDB应用简单，相对用户透明，Redis比较复杂客户端主动解决（MongoDB 一般会使用replica sets和sharding功能结合，replica sets侧重高可用性及高可靠性，而sharding侧重于性能、易扩展）
+可靠性	1.8以后采用binlog方式（Mysql同样采用该方式）支持持久化，增加可靠性	依赖快照进行持久化AOF增强可靠性，增强可靠性的同时  影响访问性能	M》R
+一致性	不支持事务，靠客户端自身保证	支持事务 比较弱  仅能保证事务中的操作按顺序执行	M《R
+数据分析	内置数据分析功能	不支持	M》R
+应用场景	海量数据的访问效率提升	较小数据量的性能及运算	M》R
+
+Not Only SQL
+文档存储：Nosql:Mogodb
+内存级的数据库
+《redis实战》的内容学习  截图内容在文档里面
+Redis：与其他数据库和软件的对比
+高性能键值缓存服务器memcached也经常被拿来与Redis比较
+两者性能差不多  但是redis能用两种不同的方式将数据写入硬盘  并且redis除了能存储普通字符串 还可以存储其他4种数据结构
+memcached只能存储普通字符串。Redis既可以做主数据库使用也可以作为其他存储刺痛的辅助数据库。
+分片是一种将数据划分为多个部分的方法，对数据的划分可以基于键包含的ID基于键
+的散列值或者基于以上两者的某种组合
+
+Redis是内存数据库  当服务器关闭时，服务器存储的数据将何去何从？
+拥有两种不同形式的持久化方法，他们都可以用小而紧促的格式将存储在内存中的数据写入硬盘：第一种时间点转储，（在指定时间段内有之有指定数量的写操作执行）
+  第二种将所有修改了数据库的命令都写入一个只追加文件里面，用户可以根据数据重要程度将只追加写入设置为从不同步  每秒同步一次或者每写入命令就同步一次。
+主从复制：（可以扩展Redis的读性能，并为Redis提供故障转移支持）执行复制的从服务器或链接上主服务器，接收主服务器发送的整个初始副本；之后主服务器执行的写命令，都会被发送给所有连接着的从服务器去执行，从而实时地更新从服务器的数据集。
+Redis中的列表：
+Redis中的集合：set是无序唯一的
+127.0.0.1:6379> sadd set-key item2
+(error) MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+127.0.0.1:6379> config set stop-writes-on-bgsave-error no
+OK
+127.0.0.1:6379> sadd set-key item4
+(integer) 1
+127.0.0.1:6379>
+Redis的散列：
+Redis的散列可以存储多个键值对之间的映射
+Redis的有序集合
+有序集合和散列一样都用于存储键值对：有序集合的键被称为成员 每个成员都是各不相同，有序集合的值被称为分值   分值必须为浮点数
+Redis五种数据类型的操作代码：
+Microsoft Windows [版本 10.0.10240]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\Administrator>cd..
+
+C:\Users>cd..
+
+C:\>cd C:\Program files\redis
+
+C:\Program Files\Redis>redis-cli.exe -h 127.0.0.1 -p 6379
+127.0.0.1:6379> set mykey 123
+OK
+127.0.0.1:6379> get meykey
+(nil)
+127.0.0.1:6379> get mykey
+"123"
+127.0.0.1:6379>
+127.0.0.1:6379> del mykey'
+Invalid argument(s)
+127.0.0.1:6379> del mykey
+(integer) 1
+127.0.0.1:6379> get mykey
+(nil)
+127.0.0.1:6379> rpush list-key item
+(integer) 1
+127.0.0.1:6379> rpush list-key item2
+(integer) 2
+127.0.0.1:6379> rpush list-key item
+(integer) 3
+127.0.0.1:6379> lrange list-key 0 -1
+1) "item"
+2) "item2"
+3) "item"
+127.0.0.1:6379> lindex list-key 1
+"item2"
+127.0.0.1:6379> lpop list-key
+"item"
+127.0.0.1:6379> lrange list-key 0 -1
+1) "item2"
+2) "item"
+127.0.0.1:6379> sadd set-key item
+(integer) 1
+127.0.0.1:6379> sadd set-key item2
+(integer) 1
+127.0.0.1:6379> sadd set-key item3
+(integer) 1
+127.0.0.1:6379> sadd set-key item
+(integer) 0
+127.0.0.1:6379> smembers set-key
+1) "item2"
+2) "item3"
+3) "item"
+127.0.0.1:6379> sadd set-key item2
+(integer) 0
+127.0.0.1:6379> smembers set-key
+1) "item2"
+2) "item3"
+3) "item"
+127.0.0.1:6379> sadd set-key item4
+(error) MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+127.0.0.1:6379> sadd set-key item2
+(error) MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+127.0.0.1:6379> config set stop-writes-on-bgsave-error no
+OK
+127.0.0.1:6379> sadd set-key item4
+(integer) 1
+127.0.0.1:6379> sismember set-key item2
+(integer) 1
+127.0.0.1:6379> srem set-key item2
+(integer) 1
+127.0.0.1:6379> smembers set-key
+1) "item4"
+2) "item3"
+3) "item"
+127.0.0.1:6379> hset hash-key sub-key1 value1
+(integer) 1
+127.0.0.1:6379> hset hash-key sub-key2 value2
+(integer) 1
+127.0.0.1:6379> hset hash-key sub-key3 value3
+(integer) 1
+127.0.0.1:6379> hset hash-key sub-key4 value3
+(integer) 1
+127.0.0.1:6379> hset hash-key sub-key4 value3
+(integer) 0
+127.0.0.1:6379> hgetall hash-key
+1) "sub-key1"
+2) "value1"
+3) "sub-key2"
+4) "value2"
+5) "sub-key3"
+6) "value3"
+7) "sub-key4"
+8) "value3"
+127.0.0.1:6379> hdel hash-key sub-key2
+(integer) 1
+127.0.0.1:6379> hget hash-key sub-key3
+"value3"
+127.0.0.1:6379> zadd zset-key 728 member1
+(integer) 1
+127.0.0.1:6379> zadd zset-key 568 member2
+(integer) 1
+127.0.0.1:6379> zadd zset-key 985 member3
+(integer) 1
+127.0.0.1:6379> zrange zset-key 0 -1 withscores
+1) "member2"
+2) "568"
+3) "member1"
+4) "728"
+5) "member3"
+6) "985"
+127.0.0.1:6379> zrangebyscore zset 0-800 withscores
+(error) ERR min or max is not a float
+127.0.0.1:6379> zrangebyscore zset 0 800 withscores
+(empty list or set)
+127.0.0.1:6379> zrangebyscore zset-key 0 800 withscores
+1) "member2"
+2) "568"
+3) "member1"
+4) "728"
+127.0.0.1:6379> zrem zset-key member1
+(integer) 1
+127.0.0.1:6379> zrange zset-key 0 -1 withscores
+1) "member2"
+2) "568"
+3) "member3"
+4) "985"
+127.0.0.1:6379>
+主要练习了redis的五大数据结构基本操作set（集合） zset（有序集合）  S(字符串)  hash  list    再接再励
+  set   mykey     123 （字符串）
+  rpush list-key  item（list）
+  sadd  set-key   item（set）
+  hset  hash-key  sub-key1   value1（hash）
+  zadd  zset-key   728       member1（zset）
+中午午睡竟然从12点50-2：45  最近有点嗜睡 ，害怕  明天少睡会，然后留时间晚上看海贼啦啦啦啦啦啦啦啦
