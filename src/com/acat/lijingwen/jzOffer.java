@@ -1,5 +1,7 @@
 package com.acat.lijingwen;
 
+import com.acat.lijingwen.tuesday.ListNode;
+
 import java.util.Scanner;
 import java.util.Stack;
 import java.lang.Math;
@@ -263,7 +265,7 @@ public class jzOffer {
   * 并保证奇数和奇数，偶数和偶数之间的相对位置不变。
   * 0是偶数 虽然下面的代码跑通了  但是自己给自己找到了bug  在这里没有考虑0的问题    若数组里面没有0   下面的算法就没问题0
   * */
-    public static void reOrderArray(int[] array) {
+/*    public static void reOrderArray(int[] array) {
         int temp=0;
         int array1[] = new int[array.length];
         int array2[] = new int[array.length];
@@ -292,16 +294,36 @@ public class jzOffer {
             System.out.println(array[j]);
         }
     }
-    /**
+    *//**
      * 上述问题改良版算法
      *
-     * */
+     * *//*
     public static void updatereOrderArray(int array[]){
 
     }
     public static void main(String []args){
         int []array={0,1,0};
         reOrderArray(array);
-    }
+    }*/
+    /*输入一个链表，输出该链表中倒数第K个结点
+    *大佬想法就是 p和 q之间相差k个数，当p遍历到尾结点那么pq所指的节点肯定相差K个。
+    * */
+/*  public ListNode FindKthToTail(ListNode head,int k){
+      ListNode p,q;
+      p = q = head;
+      for (int i=0;p!=null;i++){
+          if(i>=k){
+              q = q.next;
+          }
+      }
+      p=p.next;
+      return i<k ? null:q;
+  }*/
+   /*
+   *输入一个链表  反转链表后输出新链表的表头
+   * */
+
+
+
 
 }
