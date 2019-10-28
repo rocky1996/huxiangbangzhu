@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="" />
+    <list default="true" id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+            <state relative-caret-position="428">
+              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -36,12 +38,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt" />
         <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/mianshiti.txt" />
         <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/os&amp;jvm.txt" />
         <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/biji.txt" />
         <option value="$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/mysql.sh" />
         <option value="$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/create_wenjian.sh" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt" />
       </list>
     </option>
   </component>
@@ -169,11 +171,19 @@
       <option name="project" value="LOCAL" />
       <updated>1571735116644</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="10月28日更新文件，添加日记">
+      <created>1572263077517</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1572263077517</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21184371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -189,7 +199,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -242,13 +252,14 @@
     <MESSAGE value="晚上参加思享汇，心得" />
     <MESSAGE value="10.22日，修改数据库字段名，参加需求二审" />
     <MESSAGE value="添加笔记到git中，读取方便" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加笔记到git中，读取方便" />
+    <MESSAGE value="10月28日更新文件，添加日记" />
+    <option name="LAST_COMMIT_MESSAGE" value="10月28日更新文件，添加日记" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        <state relative-caret-position="428">
+          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
         </state>
       </provider>
     </entry>
