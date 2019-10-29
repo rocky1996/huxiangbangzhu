@@ -128,5 +128,29 @@
         String value = pair.getValue();
         System.out.println(key);
         System.out.println(value);
+    5.TaskScheduler/ThreadPoolTaskExecutor
+
+      TaskScheduler,spring3.0后自带了一个定时任务工具
+          //定时任务,多长时间后指定该任务
+          Future<?> future = taskScheduler.schedule(()->{
+
+          },...);
+
+          //比如当前一个任务结束的时刻，开始结算间隔时间，如0秒开始执行第一次任务，任务耗时5秒，任务间隔时间3秒，那么第二次任务执行的时间是在第8秒开始
+          //下次执行时间 = 任务执行时间+延迟
+          Future<?> future = taskScheduler.scheduleWithFixedDelay(new Runnable(){
+
+          },...);
+
+      ThreadPoolTaskExecutor,Spring线程池
+
+          //开一个异步线程去执行
+          threadPoolTaskExecutor.execute(new Runnable(){
+              @Override
+              public void run(){
+
+              }
+          });
+
 
 
