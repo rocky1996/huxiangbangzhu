@@ -97,3 +97,36 @@
     2.写周报，汇报上周的工作。
     3.深入需求，接着画脑图，尤其是历史的课次和优化轻选逻辑部分。
     4.下班后小区跑圈。
+
+2019.10.29(周二)
+    1.早上拉取该项目昨天的更新的部分，报错"Can't update:no tracked branch"错误，百度后，终端输入命令git branch --set-upstream-to origin/bangzhu_2019_10_0.2 bangzhu_2019_10_0.2后即可，
+    可以将昨日更新后的文件pull下来。
+    2.寻找点名截屏的数据库，进行数据的查找。项目中所有的截屏使用的是一个表，而不是每个需要截屏的功能去单独设置一个表，但是遇到了一个问题就是本次点名截屏需求需要和点名学生id去绑定，而之前使用的截屏
+    的表中没有学生id的字段，贸然加上后就会使别的功能报错，研究后，将绑定的学生id，存放到list里面，将list转换成json字符串存到备注的字段里面，这样有一个不好的地方就是来回需要进行json的解析，多一步
+    而已。
+    3.之前接触的接触的判断语句多是在代码层次进行解决，由于需求的需要，转移部分判断语句在sql中进行判断，适应以下场景。
+
+    TABLE:
+    id      name       type(默认是-1)
+    1       伍金凡1     s1
+    2       李静文2     s2
+    3       伍金凡2     s1
+    4       李静文1     s2
+    5       伍金凡3     s1
+    1       李静文4     s3
+    1       伍金凡2     s4
+    1       李静文1     s3
+    SELECT <include refid="wu_li_list"/> from TABLE_NAME
+    WHERE name=#{name}
+    <if test="type!=-1">
+        and type=#{type}
+    </if>
+
+    4.首次接触Pair<Integer,Object>
+        Pair<Integer,String> pair = new Pair<>(1,"one");
+        Integer key = pair.getKey();
+        String value = pair.getValue();
+        System.out.println(key);
+        System.out.println(value);
+
+
