@@ -195,3 +195,129 @@ OK
 Cookie类型	优点	                                                                                          缺点
 签名cookie	验证cookie所需的一切信息都存储在cookie里面。Cookie可以包含额外的信息，并且对这些信息进行签名也很容易	正确地处理签名很难  很容易忘记对数据进行签名，或者忘记验证数据的签名，从而造成安全漏洞
 令牌cookie	添加信息非常容易，cookie的体积非常小，因此移动终端和速度较慢的客户端可以更快地发送请求	                需要在服务器中存储更多信息，如果使用的是关系数据库  那么载入和存储cookie的代价可能会很高
+
+
+
+菜鸟教程：发现使用《redis实战》这本书进行不下去  所以使用菜鸟教程吧
+
+再说说前面学到的五大数据类型：
+String   hash  list  set  zset
+
+String是redis是最基本的类型    可理解为Memcached一模一样的类型一个key对应一个value。
+String类型的值最大能存储512MB
+实例：set  string  “xaioyang”
+
+Hash  是一个键值（key=>value）对集合
+每个hash可以存储2^32  -1
+
+实例：HMSET,HGET    HMSET 设置了两个 field=>value 对, HGET 获取对应 field 对应的 value
+HMSET hashkey  field1 “sds” field2 ”world”
+HGET  hashkey  field1
+“sds”
+
+
+LIST是简单的字符串列表  按照插入顺序排序  你可以添加一个元素到列表的头部或者尾部，可以存储2^32  -1 元素（4294967295，每个列表可存储40多亿）
+lRange（0，-1）表示开始到结尾
+实例：
+
+Set（集合）
+集合是通过哈希表实现的，所以添加删除查找的复杂度都是O（1）
+集合内元素的唯一性  第二次插入的元素将被忽略
+集合中最大阿德成员数为2^32   -1
+Zset(有序集合)
+添加元素到集合，元素在集合中存在则更新对应score
+Redis发布订阅：
+Redis发布订阅是一种消息通信模式：发送者发送信息订阅者接收信息
+Redis客户端可以订阅任意数量的频道
+
+Redis事务：可以一次执行多个命令，并且带有一下三个重要的保证。
+批量操作在发送EXEC命令前被放入队列缓存
+收到EXEC命令后进入事务执行，事务中任意命令执行失败，其余的命令依然被执行
+在事务执行过程，其他客户端提交的命令请求不会插入到事务执行命令序列中
+一个事务从开始到执行会经历以下三个阶段：
+    开始事务。命令入队。执行事务。
+    以下是一个事务的例子，它先以MULTI开始一个事务，然后将多个命令入队到事务中
+
+事务命令：discard  取消事务，放弃执行事务块内的所有命令
+Exec 执行所有事务块内的命令
+Multi标记一个事务块的开始
+UNwatch  取消watch命令对所有key的监视
+Watch key[key ...]
+监视一个或多个key  如果在食物执行之前这个或这些key被其他命令所改动，那么事务将被打断。
+Redis脚本  使用Lua解释器来执行脚本执行脚本的常用命令为EVAL
+Eval命令的基本语法如下：
+EVAL  script  numkeys  key[key...]arg[arg...]
+执行Lua脚本
+EVAL SHA sha1 numkeys key[key..]arg[arg..]
+执行Lua脚本
+SCRIPT  EXISTS  script[script...]
+查看指定的脚本是否已经被保存在缓存当中
+SCRIPT flush
+从脚本缓存中移除所以脚本
+Script kill
+杀死当前正在运行的lua脚本
+Script Load script
+将脚本script添加到脚本缓存中，但并不立即执行这个脚本
+Redis链接命令
+AUTH password  验证密码是否正确
+ECHO message  打印字符串
+PING  查看服务是否运行
+QUIT 关闭当前连接
+SELECT index 切换到指定的数据库
+
+
+Redis 服务器：
+BGREWRITEAOF
+异步执行一个AOF文件重写操作
+BGSAVE
+在后台异步保存当前数据库的数据到磁盘
+CLIENT KILL[ip:port][ID client-id]
+关闭客户端连接
+CLIENT GETNAME
+获取连接的名称
+CLIENT PAUSE timeout
+在制定时间内种植运行来自客户端的命令
+CLIENT SETNAME connection-name
+设置当前连接的名称
+CLUSTER  SLOTS
+获取集群节点的映射数组
+COMMAND COUNT
+获取Redis 命令总数
+COMMAND GETKEYS
+获取给定命令的所有键
+TIME 返回当前服务器时间
+。。。。
+数据备份与恢复
+SAVE命令用于创建当前数据库的备份
+恢复数据如果需要恢复数据，只需将备份文件移动到redis安装目录并启动服务即可。获取redis目录可以使用config命令，
+
+BGsave创建redis备份文件也可以使用命令BGSAVE，该命令在后台执行
+
+客户端命令
+Client list 返回连接到redis服务的客户端列表
+Client setname 设置当前连接的名称
+Client getname 获取通过client setname命令设置的服务名称
+Client PAUSE 挂起客户端链接 指定挂起的时间以毫秒计
+Client kill  关闭客户端连接
+
+Redis管道技术;
+Redis是一种基于客户端-服务器模型以及请求/响应协议的TCP服务。这意味着通常情况下一个请求遵循以下步骤：
+客户端向服务端发送一个查询请求，并监听Socket返回  通常是以阻塞模式，等待服务端响应。
+服务端处理命令，并将结果返回给客户端。
+
+查看redis管道，只需要启动redis实例并输入以下命令
+管道技术的优势：
+管道技术最显著的优势是提高了redis服务的性能
+Redis分区
+分区是分割数据到多个redis实例的处理过程，因此每个实例只保存key的一个子集
+分区的优势：通过利用多台计算机内存的和值，允许我们构造更大数据库
+通过多核和多台计算机，允许我们扩展计算能力；通过多台计算机和网络适配器允许我们扩展网络网络带宽。
+分区的不足：
+redis的一些特性在分区方面表现的不是很好：
+涉及多个key的操作通常是不被支持的。举例来说 放两个set映射到不同的redis实例上时，你就不能对这两个sey之心高教机操作
+涉及多个key的 redis操作通常是不被支持的。
+涉及多个key的redis事务不能使用
+当使用分区时，数据处理较为复杂，比如你需要处理多个rdb/aof文件，并且从多个实例和主机备份持久化文件
+增加或删除容量也比较复杂
+分区类型有范围分区：按范围分区，就是映射一定范围的对象到特定的redis实例
+哈希分区：这对任何key都适用，也无需要时object_name
