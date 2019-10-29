@@ -256,6 +256,19 @@
         91 92 93 94 95 96 97 98 99 100
         当前线程测试函数执行完毕......
 
+    7.@Transactional注解:使用这个注解的类或者方法表示该类里面的所有方法或者这个方法的事务由Spring处理，来保证事务的原子性，即是方法里面对数据库操作，如果失败则Spring
+      负责回滚，成功则执行提交操作。可以作用于接口，接口方法，类以及类方法上面。
+      @Transactional注解应该只是被应用到public方法上，如果在private,protected或者默认可见性的方法上使用@Transactional注解，将被忽略，但是也不会抛出任何的异常。
+      来自链接:https://www.cnblogs.com/zuoxh/p/9724193.html
 
+    8.收敛SpringBoot测试环境:
+      @SpringBootTest
+      @RunWith(SpringJUnit4ClassRunner.class)
+      public class Test{
 
+          @Test
+          public void test(){
+
+          }
+      }
 
