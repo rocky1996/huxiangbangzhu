@@ -121,6 +121,26 @@ DI （Dependency Injection）依赖注入：组建
 11.Spring-web.jar 包含web开发时用到spring框架时所需的核心类
 12.Spring-webmvc.jar包含spring MVC框架的所有；类
 13.Spring -mock.jar :包含spring一整套mock类来辅助应用的测试
+/*spring mvc*/
+ModelAndView mav = new ModelAndView(index.jsp)
+
+视图定位：修改springmvc-servlet.xml
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+   <property name="prefix" value="/WEB-INF/page/" />
+   <property name="suffix" value=".jsp" />
+</bean>
+视图定位后修改controller：ModelAndView  mav = new ModelAndView("index")
+
+/******注解**********
+在springmvc-servlet.xml添加
+组建扫描
+<context:component-scan base-package="controller" />
+
+
+
+
+
+
 
 ***********************************************
 算法

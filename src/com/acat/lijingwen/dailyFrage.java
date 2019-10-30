@@ -1,5 +1,7 @@
 package com.acat.lijingwen;
 
+import javafx.util.Pair;
+
 import javax.annotation.processing.SupportedAnnotationTypes;
 import java.util.Scanner;
 
@@ -109,8 +111,14 @@ sc.nextInt() //输入整数
 1. 父类（接口）引用指向子类对象
 2. 调用的方法有重写
 * */
+public static void main(String []args) {
+    /*配对提供了一种方便方式来处理简单的键值关联，当我们想从方法返回两个值时特别有用。*/
+    Pair<Integer, String> pair = new Pair<>(1, "one");
+    Integer key = pair.getKey();
+    String value = pair.getValue();
+    System.out.println(key);
+    System.out.println(value);
 
-
-
+}
 
 }
