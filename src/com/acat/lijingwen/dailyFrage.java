@@ -3,6 +3,8 @@ package com.acat.lijingwen;
 import javafx.util.Pair;
 
 import javax.annotation.processing.SupportedAnnotationTypes;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class dailyFrage {
@@ -111,14 +113,34 @@ sc.nextInt() //输入整数
 1. 父类（接口）引用指向子类对象
 2. 调用的方法有重写
 * */
-public static void main(String []args) {
-    /*配对提供了一种方便方式来处理简单的键值关联，当我们想从方法返回两个值时特别有用。*/
+/*public static void main(String []args) {
+    *//*配对提供了一种方便方式来处理简单的键值关联，当我们想从方法返回两个值时特别有用。*//*
     Pair<Integer, String> pair = new Pair<>(1, "one");
     Integer key = pair.getKey();
     String value = pair.getValue();
     System.out.println(key);
     System.out.println(value);
 
-}
+}*/
+/*list的实际操作 */
+    public static void main(String[] args) {
+        String s6 = "     z   h   a   n   g  s  an     ";
+        String z = s6.substring(0, s6.indexOf('z'));//开始空格
+        String n = s6.substring(s6.lastIndexOf('n') + 1);//末尾空格
+        String s7 = s6.trim();//去除前后空格
+        ArrayList<Character> list=new ArrayList<Character>();
+
+        char arr[]=new char[s7.length()];
+        for (int i = 0; i < s7.length(); i++) {
+            if (s7.charAt(i) == ' ') {
+                continue;
+            }char c= s7.charAt(i);
+            list.add((c));
+        }
+        for(int i=0;i<list.size();i++){
+        System.out.println(list.get(i));
+        }
+    }
+
 
 }
