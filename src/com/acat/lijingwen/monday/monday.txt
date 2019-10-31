@@ -208,6 +208,37 @@ SpringMVC会自动检测类发生的变化，但是web.xml做的改动还是必�
 /******拦截器
 
 
+/********2019.10.31   进行了mybatis的入门练习  进行了数据库单表的增删查改（CRUD）  代码在eclipse中   今天还开了个会上午就没了   学习效率不高
+了解了mybatis的运行流程为
+应用程序找Mybatis要数据
+mybatis从数据库中找来数据
+  通过mybatis-config.xml 来定位那个数据库
+  通过Category.xml执行对应的select语句
+  给予Category.xml把返回的数据库记录封装在Category对象中
+  把多个Category对象装在一个Category集合中
+返回一个Category集合
+Mapper.xml文件
+<mapper namespace="mapper.xml文件的包名">
+      <insert id="此处的id要与应用中调用函数到的id一致（个人理解就是要干什么事）"   parameterType="这里就是参数类型（个人理解为要操作的pojo的类名）因为插入数据是表的所有类型"  >
+        insert into category_ (name) values (#{name})
+      </insert>
+
+      <update id="updatecategory" parameterType="_int" resultType="这里就是参数类型（个人理解为要操作的pojo的类名）因为此处是返回整个表">
+         update category_ set name=#{name} where id=#{id}
+      </update>
+
+      <delete id="deletecategory" parameterType="_int" >
+          delete from category_ where id=#{id}
+      </delete>
+
+      <update id ="category" parameterType="Category">
+          update category_ set name=#{name}  where id=#{id}
+      </update>
+      疑问：parameterType到底怎么写比较好  有时候写的数据类型有的时候写的是pojo的；类名
+      还有resultType
+       insert into category_ (name) values (#{name})
+       update category_ set name=#{name}  where id=#{id}
+</mapper>
 
 
 
