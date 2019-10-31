@@ -282,5 +282,13 @@
     三.在测试机上面找到对应的互动，以及互动具体的功能部分对应的接口。
     3.下班回家小区广场跑了几圈。
 
+2019.10.31(周四)
+    1.今天在我Idea里面创建SpringBoot项目的时候才发现我安装的时候，安装的是社区版本，而不是企业版，创建不了SpringBoot项目，于是安装了Spring Assistant插件后，OK。
+    2.在centos服务器里面里面部署环境遇阻，是某服务器子机权限问题。
+    3.开辟新的项目，探索kafka,es,mongodb,redis之间企业级的Demo使用。
+      链接:https://github.com/rocky1996/remote
+
+
+
 
 
