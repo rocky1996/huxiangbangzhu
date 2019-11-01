@@ -239,8 +239,34 @@ Mapper.xml文件
        insert into category_ (name) values (#{name})
        update category_ set name=#{name}  where id=#{id}
 </mapper>
+/*********2019.11.1   多条件查询和模糊查询   一对多的关系  多对一
+多条件查询和模糊查询：
+模糊查询：
+<select id="vagueSelect" parameterType="String" resultType="Category">
+    select * from category_ where name like concat('%',#{0},'%')
+</select>
+******************这里有个问题  #{0}表示什么意思
+多条件查询
+<select id="mulselet" parameterType="map" resultType="Category">
+    select * from category_ where id=#{id} and name like concat('%',#{name},'%')
+</select>
 
-
+一对多：
+通过left join关联查询  对category_和product_表进行关联查询
+与前面学习的有所区别 这里不用resultType 而不是 resultMap把数据取出来放在对应的对象属性里
+Category 的id字段和Product的id 字段同名  Mybatis不知道谁是谁的 所以需要通过取别名cid  pid来区分
+<select id="listLinkQuery" resultMap="CategoryBean">
+    select c.*,p.* ,c.id 'cid',p.id 'pid',c.name 'cname',p.name 'pname' from category_ left join product_ p on c.id = p.id
+<select/>
+多对一：
+指的是多个产品属于一个类别  比如香蕉 苹果都属于水果。
+用到了
+<association>
+</association>
+<根据ID查询product 关联orders查询出来  用left join 关联两个表>
+<select id="listProduct" resultMap="productBean">
+   select c.*,p.*,c.id 'cid',p.id 'pid',c.name 'cname',p.name 'pname'  from category_ c left join product_ p on c.id = p.id
+</select>
 
 
 
