@@ -1,4 +1,4 @@
-package com.acat.lijingwen.monday;
+package com.acat.lijingwen.October.monday;
 
 public class insersort {
 //直接插入排序

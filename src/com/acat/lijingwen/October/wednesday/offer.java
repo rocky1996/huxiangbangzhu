@@ -1,7 +1,4 @@
-package com.acat.lijingwen.wednesday;
-
-import java.util.ArrayList;
-import java.util.Scanner;
+package com.acat.lijingwen.October.wednesday;
 
 import java.io.BufferedReader;
 import java.io.IOException;

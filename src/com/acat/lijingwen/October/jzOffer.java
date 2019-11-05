@@ -1,10 +1,5 @@
-package com.acat.lijingwen;
+package com.acat.lijingwen.October;
 
-import com.acat.lijingwen.tuesday.ListNode;
-
-import java.util.Scanner;
-import java.util.Stack;
-import java.lang.Math;
 public class jzOffer {
 
   /*  //用两个栈来实现一个队列

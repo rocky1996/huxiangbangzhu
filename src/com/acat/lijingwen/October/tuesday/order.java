@@ -1,6 +1,4 @@
-package com.acat.lijingwen.tuesday;
-
-import sun.reflect.generics.tree.Tree;
+package com.acat.lijingwen.October.tuesday;
 
 public class order {
     //先序遍历  递归和非递归实现的理解

@@ -1,9 +1,5 @@
-package com.acat.lijingwen.friday;
-import redis.clients.jedis.Jedis;
+package com.acat.lijingwen.October.friday;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 /*
 *redis的配置和导包
 * redisService

@@ -1,9 +1,4 @@
-package com.acat.lijingwen.saturday;
-
-import com.sun.org.apache.xpath.internal.objects.XObject;
-
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ThreadPoolExecutor;
+package com.acat.lijingwen.October.saturday;
 
 public class threadpool {
     //线程池执行任务方法

@@ -1,0 +1,47 @@
+2019.11.2  早上早起大致复习了信息方面的基本规则     下午考了一个半小时的试，但是竟然做了5小时的车，自闭了
+2019.11.3  看了老师推荐的GAN相关资料  下午打了会球
+2019.11.4  早上开题报告完善，创新点基本成型       下午修改+排版“职点迷津”BP书   git打标签     完成了服务器搭建java环境
+           git  打标签的原因/目的：标记提交的版本  容易查找  会和某次提交绑在一起
+           廖雪峰：发布版本时 我们通常在版本库中打一个标签，这样就唯一确定了打标签时刻的版本。
+将来无论什么时候，就是把那个标签的时刻的历史版本取出来。所以标签也是版本库的一个快照。
+GIT的标签虽然是版本库的快照，但其实他就是只想某个commit的指针。虽然很像分支但是分支可以移动标
+签不可移动，所以创建和删除标签都市瞬间完成的。
+还有为什么commit存在还要引入tag？因为commit号是一串数字字符的混合体，tag直接找版本号就ok
+
+注意的是：标签总和某个commit挂钩  如果这个commit即出现在master分支 有出现在dev分支 那么这两个分支上都可以看到这个标签
+ git tag -d (tag-name)删除tag
+ git push origin <tagname> 推送某个标签到远程
+ git push origin --tags  一次性推送全部尚未推送到远程的本地标签
+ git push oorigin :refs/tags/tagname   当将标签推送到远程后想要删除需要使用下面的命令。
+ git tag (tag-name)创建tag
+ git branch  显示分支
+ git  log  --pretty =oneline --abbrev-commit 显示提交日志
+ git checkout branchname 在Git中打标签非常简单，首先，切换到需要打标签的分支上：
+git show tagname  显示tag的相关信息
+git tag -a <tagname> -m "blablabla"可以指定标签信息
+git  tag  october_V  166c64a  给某次提交打标签  比方说要对add merge这次提交打标签，它对应的commit id是f52c633，敲入命令
+
+linux(centos) 保存退出vi编辑
+保存命令
+
+
+
+按ESC键 跳到命令模式，然后：
+
+
+
+:w   保存文件但不退出vi
+
+:w file 将修改另外保存到file中，不退出vi
+
+:w!   强制保存，不推出vi
+
+:wq  保存文件并退出vi
+
+:wq! 强制保存文件，并退出vi
+
+q:  不保存文件，退出vi
+
+:q! 不保存文件，强制退出vi
+
+:e! 放弃所有修改，从上次保存文件开始再编辑

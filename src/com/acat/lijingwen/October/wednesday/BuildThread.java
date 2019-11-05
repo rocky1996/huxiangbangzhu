@@ -1,4 +1,4 @@
-package com.acat.lijingwen.wednesday;
+package com.acat.lijingwen.October.wednesday;
 
 /*
 public class BuildThread extends Thread{

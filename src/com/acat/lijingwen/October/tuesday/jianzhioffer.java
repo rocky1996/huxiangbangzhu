@@ -1,4 +1,4 @@
-package com.acat.lijingwen.tuesday;
+package com.acat.lijingwen.October.tuesday;
 
 import java.util.ArrayList;
 import java.util.Stack;

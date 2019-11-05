@@ -1,4 +1,4 @@
-package com.acat.lijingwen.thursday;
+package com.acat.lijingwen.October.thursday;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
