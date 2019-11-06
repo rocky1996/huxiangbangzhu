@@ -18,3 +18,11 @@
      	 </select>
 
      	  这两段 上面的<select></select>哪里有问题勒？
+
+     	  <select id = "bindProduct" resultType="Product">
+     	      select * from product_
+     	      <bind name="likename" value="'%'+name+'%'"/>
+     	      <if test="likename != null">
+     	            where likename like #{likename}
+     	      </if>
+     	  </>

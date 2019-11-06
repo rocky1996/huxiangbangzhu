@@ -77,3 +77,5 @@
                 @Autowried
                 @Qualifier("eatLunchImpl1")
                 private EatLunch eatLunch;
+
+    4.回家修复线上bug,未解决，明日再看吧
