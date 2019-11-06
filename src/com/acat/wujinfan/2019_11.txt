@@ -33,3 +33,47 @@
         之前别人写的代码,属于互动情况考虑不全的问题,但是代码版本迭代太多,代码稍微有点乱,修复起来有点困难,好在在导师的帮助
         下定位出了问题,下一步进行修复。
     晚上回去跑圈去。
+
+2019.11.06(周三)
+    1.中午休息的时候，无意中看到了部门大总监田密老师内部的演讲视频,讲的非常棒,感觉很有所触动。
+    2.工作进程:今日起进入到1209版本的开发阶段,领取新版本的开发任务(3个)进行开发。
+    3.对新老注解的认识:
+        <1>
+            @RestController和@Controller的区别:
+            @RestController = @ResponseBody + @Controller
+
+            @Controller类中的方法可以直接通过返回String跳转到jsp,html里面，只有通过@ResponseBody注解才可以返回String,Object,json等对象.
+            @RestController类中的方法只能返回String,Object,json等对象.
+        <2>
+            @Autowried和@Resource的区别:
+            相同:都是用来装配bean,均可用于字段或者setter方法
+            不同:@Autowried是Spring提供
+                默认情况下要求对象必须存在, 它要求依赖对象必须存在. 若允许null值, 可以设置它的required为false.
+                默认按照类型进行装配注入. 如果想按照名称进行装配的话, 需要与Qualifer注解搭配使用.
+
+                @Resource是J2EEt提供
+                默认按照名称来装配注入, 只有找不到与名称匹配的bean才会按照类型来注入.
+                name: Spring将name的属性值解析为bean的名称, 使用byName的自动注入策略
+                type: Spring将type的属性值解析为bean的类型, 使用byType的自动注入策略
+                如果既不指定name属性又不指定type属性, Spring这时通过反射机制使用byName自动注入策略
+                name > type
+        <3>
+            @Configuration注解标注在类上面,相当于把类作为spring的xml配置文件中的<bean>，作用为:配置spring容器.
+            @Configuration等价于<Beans></Beans>
+            @Bean等价于<Bean></Bean>
+            @ComponentScan等价于<context:component-scan base-package="com.acat.xxx"/>
+
+        <4>
+           @Qualifier合格的意思,使用场景是:
+                public interface EatLunch{}
+            该接口有两个实现类
+                @Service("eatLunchImpl1")
+                public class EatLunchImpl1 implements EatLunch(){}
+
+                @Service("eatLunchImpl2")
+                public class EatLunchImpl2 implements EatLunch(){}
+
+            在controller里面进行@Autowried注入的时候，系统不知道调用的是哪一个实现类,于是就使用到了这个注解
+                @Autowried
+                @Qualifier("eatLunchImpl1")
+                private EatLunch eatLunch;
