@@ -79,3 +79,19 @@
                 private EatLunch eatLunch;
 
     4.回家修复线上bug,未解决，明日再看吧
+
+2019.11.07(周四)
+    1.接着修复昨天的bug。在修复的时候把对之前代码的删除效率问题进行了重新的修复,遇到批量修改,批量删除的任务,尽量避免在代码层次上进行循环操作,而是使用批量的SQL语句
+      int delPhoto(List<String> list);
+      <delete id="del" parameterType="java.util.List">
+          DELETE FROM rti_material_img WHERE id IN
+          <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+              #{item}
+          </foreach>
+      </delete>
+    2.在开发中注意到了一个问题，也是需要注意的地方，在接口开发中接口的公参尽量不要去使用,需要什么参数让前端给传什么参数,
+      哪怕传的参数和公参里面的一样
+
+    3.昨天遇到了一个新版本需求的任务,需要找产品碰一下,商量之后砍掉了。
+    4.下午开发完毕图片上墙表扬部分。
+    今天买了一张《平凡的世界》的话剧票，下周去看话剧去。哈哈哈😄
