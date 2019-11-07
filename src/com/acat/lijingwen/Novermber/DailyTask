@@ -72,26 +72,93 @@
            where id in('1','3','5')   各占位之间用‘,’分开 open于 (     close于 )
 
          *******************bind 标签类似与做字符串的拼接***************
+                 <select id ="bindone"  resultType="Product" >
+                     <bind name=" likename" value="'%' + name + '%'"  />
+                     select * from   product_  where name like #{likename}
+                 </select>
 
 
+                  <select id="bindProduct" resultType="Product">
+              		 <bind name="likename"  value="'%' + name + '%'" />
+              		 select  *  from   product_  where name like #{likename}
+              	 </select>
 
+              	  这两段 上面的<select></select>哪里有问题勒？
+2019.11.07  注解  日志
 
+          log4j  用于记录调试信息
+          *************日志*************
+          日志级别可观察，一共有6个级别 TRACE DEBUG(可见) INFO WARN ERROR FATAL
+                 logger.trace("跟踪信息");
+                 logger.debug("调试信息");
+                 logger.info("输出信息");
+                 logger.warn("警告信息");
+                 logger.error("错误信息");
+                 logger.fatal("致命信息");
 
+          输出格式：
+                 %c  输出日志信息所属的类的全名
+                 %d  输出日志时间点的日期或时间，默认格式是ISO8601 也可以在其后制定格式
+                 %f  输出日志信息所属的类的类名
+                 %l  输出日志事件的发生位置  技术处日志新ixde语句处于它所在的类的第几行
+                 %m  输出代码中制定的信息 如 log(message)  中的message
+                 %n  输出一个回车换行符  windows平台为rn  Unix 平台为n
+                 %p  输出优先级
+                 %r  输出自应用 启动到输出该日志信息所含非的毫秒数
+                 %t  输出产生该日志时间的线程名
+                 %5p [%t] (%F:%L) - %m%n 就表示
+                 宽度是5的优先等级 线程名称 (文件名：行号)-信息  回车换行
+          除了使用log4j.properties还可以使用xml格式进行配置
 
+           # Global logging configuration
+           log4j.rootLogger=debug, stdout
+           # MyBatis logging configuration...
+           #mybatis 的日志设置mybatis这个包的局部日志级别是trace
+           # 因为sql语句属于trace  ，所以设置了一个局部的日志级别以便输出执行sql语句的信息
+           log4j.logger.maybatis.how2java=TRACE
+           # Console output...
+           log4j.appender.stdout=org.apache.log4j.ConsoleAppender   #也就是到控制台
+           log4j.appender.stdout.layout=org.apache.log4j.PatternLayout  #布局
+           log4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n  #输出格式
 
+            *************事务管理************
+            同一个事务中  要是有一条语句出错其他的语句也完成不了 (此时有个条件  那就是表的类型 必须为Innodb  其他类型第一条数据仍然可以插入)
+            Mysql中 只有当婊的类型是INNODB  的时候  才支持事务  所以需要把表category_  的
+            类型设置为INNODB，否则无法观察到事务
+            修改表类型是
+            alter  table  tablename ENGINE = innodb
+            查看表的类型的sql
+            show  table status  from  how2java;
 
+            *************延迟加载*************
+             作用是个啥？
+             在进行数据查询时，为了提高数据库查询性能尽量使用单表查询，因为单表查询比多表查询速度要快
+             如果查询单表就可以满足需求，一开始先查询单表，当需要关联信息时，在关联查询，当需要关联信息在查询
+             这个就叫延迟加载。mybatis 提供延迟加载的功能用于service层
+             resultType 将查询结果按照sql列名pojo属性名一致映射到pojo中。
+             lazyLoadingEnabled 全局性设置懒加载   如果设为‘false’则所有相关联的都会被初始化加载
+             aggressiveLazyLoading  当设置为 true  的时候，懒加载的对象可能被任何懒属性全部加载。否则，每个属性都按需加载。
 
+             ***********Mybatis分页**********************
+            XML方式
+            <select id="PageTest"  reslutType="Category" >
+                  select * from category_
+                  <if test="start!=null and count!=null">
+                      limit #{start},#{count}
+                  </if>
+            </select>
 
+            注解方式
+            @Select("select * from category_ limit #{start},#{count}")
+            public List<Category> listByFenye(@Param("start") int start,Param("count") int count);
 
+             插件  PageHelper  是分页插件 分页开发会更加便捷
 
+            需要用到两个插件jsqlparser   pagehelper
 
+            ***在测试插件的时候遇到了灵异事件  将方法全都注释掉竟然还是跑出来之前的东西  请赐予我一张符吧
 
-
-
-
-
-
-
+            /****************Mybatis的一级缓存
 
 
 

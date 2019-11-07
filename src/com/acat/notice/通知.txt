@@ -5,16 +5,3 @@
     我最近把ssm框架总结好，上传上去，周末把这个事给忘了，尴尬.
 2019.11.05
     有空看看设计模式,把基本的一些设计模式熟悉一下
-2019.11.06:
-        <select id ="bindone"  resultType="Product" >
-            <bind name=" likename" value="'%' + name + '%'"  />
-            select * from   product_  where name like #{likename}
-        </select>
-
-
-         <select id="bindProduct" resultType="Product">
-     		 <bind name="likename"  value="'%' + name + '%'" />
-     		 select  *  from   product_  where name like #{likename}
-     	 </select>
-
-     	  这两段 上面的<select></select>哪里有问题勒？
