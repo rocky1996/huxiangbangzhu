@@ -123,7 +123,7 @@
 
             *************事务管理************
             同一个事务中  要是有一条语句出错其他的语句也完成不了 (此时有个条件  那就是表的类型 必须为Innodb  其他类型第一条数据仍然可以插入)
-            Mysql中 只有当婊的类型是INNODB  的时候  才支持事务  所以需要把表category_  的
+            Mysql中 只有当表的类型是INNODB  的时候  才支持事务  所以需要把表category_  的
             类型设置为INNODB，否则无法观察到事务
             修改表类型是
             alter  table  tablename ENGINE = innodb
