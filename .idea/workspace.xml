@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="">
+    <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,94 +11,59 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
       <list>
-        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/mianshiti.txt" />
-        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/os&amp;jvm.txt" />
-        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/notes/biji.txt" />
-        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/mysql.sh" />
-        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/create_wenjian.sh" />
-        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt" />
+        <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1190" />
-    <option name="height" value="1050" />
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="bangzhu_2019_10_0.2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="acat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="acat" type="462c0819:PsiDirectoryNode" />
-              <item name="lijingwen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="acat" type="462c0819:PsiDirectoryNode" />
-              <item name="wujinfan" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1SsIKQCWALOJcbX01ydSGH7cKvp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssmTest" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\huxiangbangzhu\src\com\acat\lijingwen\October\monday" />
+      <recent name="E:\huxiangbangzhu\src\com\acat\lijingwen\October" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.dailyFrage">
     <configuration name="Apple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.acat.wujinfan.Apple" />
       <module name="huxiangbanzhu" />
@@ -125,8 +91,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="connectService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.October.friday.connectService" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.October.friday.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dailyFrage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.dailyFrage" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.dailyFrage" />
+        <item itemvalue="Application.connectService" />
         <item itemvalue="Application.Apple" />
       </list>
     </recent_temporary>
@@ -136,12 +130,24 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a443ea6a-e580-46f6-b373-d0b07ec71b84" name="Default Changelist" comment="" />
+      <changelist id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="thuesday 2(星期四任务补充)" />
       <created>1571227876158</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571227876158</updated>
       <workItem from="1571227881727" duration="1034000" />
+      <workItem from="1572345815910" duration="893000" />
+      <workItem from="1572346784737" duration="9149000" />
+      <workItem from="1572359269041" duration="101000" />
+      <workItem from="1572403526412" duration="12316000" />
+      <workItem from="1572522526303" duration="2928000" />
+      <workItem from="1572600147109" duration="4582000" />
+      <workItem from="1572613845698" duration="3263000" />
+      <workItem from="1572840826181" duration="8858000" />
+      <workItem from="1572915256229" duration="4097000" />
+      <workItem from="1573036230834" duration="6905000" />
+      <workItem from="1573115070092" duration="11107000" />
+      <workItem from="1573177319488" duration="7917000" />
     </task>
     <task id="LOCAL-00001" summary="monday task1">
       <created>1571228479929</created>
@@ -171,46 +177,99 @@
       <option name="project" value="LOCAL" />
       <updated>1571735116644</updated>
     </task>
-    <task id="LOCAL-00005" summary="10月28日更新文件，添加日记">
-      <created>1572263077517</created>
+    <task id="LOCAL-00005" summary="线程池/剑指offer/redis">
+      <created>1572271502372</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1572263077517</updated>
+      <updated>1572271502372</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="java基础  redis菜鸟教程">
+      <created>1572359311959</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572359311960</updated>
+    </task>
+    <task id="LOCAL-00007" summary="git报警测试">
+      <created>1572421508077</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572421508078</updated>
+    </task>
+    <task id="LOCAL-00008" summary="spring MVC的初练习">
+      <created>1572444831018</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572444831018</updated>
+    </task>
+    <task id="LOCAL-00009" summary="spring mvc 的初练">
+      <created>1572444930110</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572444930110</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2019.10.31   进行了mybatis的入门练习  进行了数据库单表的增删查改（CRUD）  代码在eclipse中   今天还开了个会上午就没了   学习效率不高">
+      <created>1572527832262</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572527832262</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2019.11.1   多条件查询和模糊查询   一对多的关系  多对一">
+      <created>1572617943505</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572617943505</updated>
+    </task>
+    <task id="LOCAL-00012" summary="早上开题报告完善，创新点基本成型       下午修改+排版“职点迷津”BP书    git打标签     完成了服务器搭建java环境">
+      <created>1572915526700</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572915526700</updated>
+    </task>
+    <task id="LOCAL-00013" summary="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql">
+      <created>1572962623202</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572962623203</updated>
+    </task>
+    <task id="LOCAL-00014" summary="论文+动态sql">
+      <created>1573049328175</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1573049328175</updated>
+    </task>
+    <task id="LOCAL-00015" summary="mybatis 相关   还有服务器java环境搭建的总结">
+      <created>1573138139953</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573138139953</updated>
+    </task>
+    <task id="LOCAL-00016" summary="缓存机制spring mybatis的简单整合">
+      <created>1573221130773</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573221130773</updated>
+    </task>
+    <task id="LOCAL-00017" summary=".">
+      <created>1573221443311</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1573221443311</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21184371" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32959184" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32959184" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -221,12 +280,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -252,65 +306,19 @@
     <MESSAGE value="晚上参加思享汇，心得" />
     <MESSAGE value="10.22日，修改数据库字段名，参加需求二审" />
     <MESSAGE value="添加笔记到git中，读取方便" />
-    <MESSAGE value="10月28日更新文件，添加日记" />
-    <option name="LAST_COMMIT_MESSAGE" value="10月28日更新文件，添加日记" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/2019_10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/notes/mianshiti.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-522">
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/notes/os&amp;jvm.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6035">
-          <caret line="355" selection-start-line="355" selection-end-line="355" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/notes/biji.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28441">
-          <caret line="1673" selection-start-line="1673" selection-end-line="1673" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/CountDownLatch/CountDownDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/CountDownLatch/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/mysql.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="66" lean-forward="true" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/shell/database/create_wenjian.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <MESSAGE value="线程池/剑指offer/redis" />
+    <MESSAGE value="java基础  redis菜鸟教程" />
+    <MESSAGE value="git报警测试" />
+    <MESSAGE value="spring MVC的初练习" />
+    <MESSAGE value="spring mvc 的初练" />
+    <MESSAGE value="2019.10.31   进行了mybatis的入门练习  进行了数据库单表的增删查改（CRUD）  代码在eclipse中   今天还开了个会上午就没了   学习效率不高" />
+    <MESSAGE value="2019.11.1   多条件查询和模糊查询   一对多的关系  多对一" />
+    <MESSAGE value="早上开题报告完善，创新点基本成型       下午修改+排版“职点迷津”BP书    git打标签     完成了服务器搭建java环境" />
+    <MESSAGE value="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql" />
+    <MESSAGE value="论文+动态sql" />
+    <MESSAGE value="mybatis 相关   还有服务器java环境搭建的总结" />
+    <MESSAGE value="缓存机制spring mybatis的简单整合" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
