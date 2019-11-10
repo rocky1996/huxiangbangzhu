@@ -5,3 +5,7 @@
     我最近把ssm框架总结好，上传上去，周末把这个事给忘了，尴尬.
 2019.11.05
     有空看看设计模式,把基本的一些设计模式熟悉一下
+ssh-keygen -t rsa -C "2797661571@qq.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key
+(/Users/C：/user/.ssh/id_rsa)：C：/user/.ssh/id_rsa_personal_ziqi
