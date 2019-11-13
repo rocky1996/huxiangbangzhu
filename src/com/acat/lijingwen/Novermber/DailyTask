@@ -241,7 +241,56 @@
             但是写缓冲区仅对自己的处理器可见所以会导致处理器执行内存操作的顺序可能会与时间的操作执行顺序不一致
             happens-before
             as-if-serial: 不管怎么重排序
+2019.11.13
+          Spring的学习  开会再次明确了任务 以及开题里面的一些问题
+          Spring IOC/DI第一节
+          IOC（控制反转Inversion of Control）利用了工厂模式
+          创建被调用者由spring容器来完成，然后注入调用者，因此被称为以来注入DI(Dependecy Injection)，依赖注入和控制反转是同一个概念。
+          AOP（面向切面编程 Aspect -Oriented Programming）是代理模式
+          SpingAOP只是实现了方法级别的连接点，在J2ee应用中Aop拦截到方法级别的操作就已经足够了。
 
+
+          OOP面向对象编程  允许定义从上到下的关系，但并不适合定义从左到右的关系。例如日志汪汪水平的散不在所有对象层次中  OOP设计中会导致大量重复代码 不利于各个模块的重用。
+
+          实现AOP技术住哟啊分为  采用动态代理技术  利用截取消息的方式对该消息进行装饰，以取代原有对象行为的执行。
+
+          SprinIOC/DI：这里呢说明spring中配置文件和类之间关联
+
+          对象的生命周期交给Spring来管理，直接从Spring哪里去获取一个对象。
+          测试代码的过程是：
+          先把spring容器摆好了  就是ApplicationContext  context =new ClassPathXMLApplicationContext(此处放入配置文件的路径例如：“ new String[] { "applicationContext.xml" }”)
+          与传统方式不一样的是将对象的生命周期交由Spring来管理，直接从Spring 那里去获取一个对象。
+          Category c = (Category)context.getBean(“此处为对应bean的name（name不可以重复）”)
+
+
+          Spring注入对象第二节：
+          <property ref    value 的区别>
+          Ref引用一个已经存在的对象；可以引用其他的bean对象；使用ref的时候，spring容器会在引用后进行验证，验证当前的xml是否存在引用的bean。
+          <property name=”p” ref=”c”>
+          这里的ref是注入另一个对象  因为 在创建product的时候注入了一个category对象
+          控制台会输出：信息: Pre-instantiating
+          （这个表示通过spring拿到的Product对象已经被注入了category对象了）
+
+          Spring系列教材 （三）- 注解方式 IOC/DI 
+          首先是注入对象行为：
+          首先在配置文件applicationContext.xml这个文件加入<context:annotation-config/>
+          这个表示要以注解的形式进行注入了
+          然后再pojo的实体类里面将需要注入的对象加注解
+            @Autowried
+          @Resource(name=”需要注入的bean的name”)
+            还有就是给pojo中的set方法加@Autowried
+          然后就是对Bean的注解：
+          将配置文件的<bean></bean>全取消  只新增<context :component-scan bae-package=”pojo的包名”>然后为每个实体类加上@Component(“p”)
+
+          Spring系列教材 （四）- aop 面向切面编程 
+          AOP即Aspect Oeiented Program面向切面编程
+          首先，在面向切面编程的思想里面把功能分为核心业务功能和周边功能
+          周边功能比如性能统计 日志 事务管理等 在AOP思想里被定义为切面
+
+          Eclipse报错
+            Implicit super constructor Object() is undefined for default constructor. Must define an explicit constructor
+          解决方案：把java的类库加载进去，在工程上右键选择属性->Java Build Path的Libraries->Add Library选择JRE System Library->点击Next->选择Execution environment并选择版本或workspace default jre->点击Finish。
+          但是，似乎还是有问题还在找问题所在。
 
 
 
