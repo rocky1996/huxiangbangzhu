@@ -314,6 +314,43 @@
           64位的变量拆分为两个32位写操作来执行  这两个写操作就可能会被放入不同的总线事务中执行，此时这个64位的变量将不具有原子性。JSR-133内存模型JDK5之后要求  将64位的变量只能拆为两个32的写操作读操作必须得具有原子性，
           之前是可以拆分为两个32为的读写操作
 
+2019.11.15-17  回家  周六去了山里面的庙里  很清静走的时候师傅还给我塞了好几个甜枣开心，好几年全凭印象竟然找到了，之前经过的水库现在进行干涸了全都长草了，时间真可怕，想当年还和我哥我姐来钓鱼。。。
+
+
+2019.11.18  早上将创新基金的申请书基本完工 但是还有几点说的不是很明白，下午看了会双十一老
+            师专门买的书，大致了解了一下，，发现了之前老师问的问题的较为合理的答案
+            什么时候确定生成网络和判别网络处于较为平衡的状态?
+            那就是判别器最理想的损失接近0.5，这个情况下对于判别其来说其无法从真实
+            图像中区分出生成的图像。
+
+             下午五点多开始学习了会java 主要内容是SSM框架的搭建  以及运行的流程步骤
+             今天在eclipse中进行操作
+
+             首先建立了Dynamic  Web Project
+              包有  controller  用于前后的交流
+                   mapper  数据的映射
+                   pojo  对应数据库表的实体类  似乎一般会进行重写ToString方法
+                   service 逻辑操作接口类里面将逻辑操作写好    实现类里面会注入mapper
+              在src 下面建立applicationContext.xml   springMVC.xml
+              web-inf  底下建立web.xml
+
+              流程展示：
+              例如将表里面的数据调用然后展示到前段界面：
+              1.在浏览器进行访问这里面会将jsp 文件配置好前缀和后缀会配置好  完了就可以省略
+              2.tomcat 根据web.xml 上的配置信息，拦截到/listCategory，并将其交由DispatcherServlet处理
+              3.DispatcherServlet根据springMVC配置，将这次请求交由CategoryController 类进行处理
+              4.Categorycontroller类注入CatrgoryServiceIMPL
+              5.实例化CategoryServiceImpl时又注入了CategoryMapper
+              6.根据ApplicationContext.xml中的配置信息将CategoryMapper和Category.xml关联起来
+              7.这样拿到了实例化好了的CategoryController 并调用list方法
+              8.在list方法中访问CategoryService并获取数据  并把数据放在CS上  接着服务器端跳转到listCategory.jsp
+              中。
+
+             //在IDEA里面进行ssm的创建
+
+             学习CartoonGAN
+             回宿舍看一会JAVA基础
+
 
 
 
