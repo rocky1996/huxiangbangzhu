@@ -363,9 +363,63 @@
             明天继续改进  然后晚上安慰了一下朋友  然后思考了一下自己还有未来的某些事情 突然不想学习了哈哈哈  打到回府洗衣服
 
 
+2019.11.21
 
+            分页：首先要创建一个util 工具包 然后哦创建page 类 里面放入statr  last count（表示起始的数据是哪一个 最后一页的起始数据是什么  每页的数量 ）
+            最后一页的计算方法  为  数据对每页的数量count 进行取余  若整除  那么最后一页的起始数据为total - count
+            若不能则total - total%count
 
+            Limit 后面可以跟两个参数  第一个参数offset 可选参数表示偏移量，如果不指定默认值为0 即偏移量为0 则从查询结果的第一条记录数开始   若偏移量为1则开始查询结果中第二条记录   下一个就是第3个数据了
+            第二参数  记录数 表示返回结果的条数
 
+            基于插件的分页：
+            将分页的包PageHelper 和 jsqlparser.jar 包
+
+            主要是配置applicationContext.xml
+            <property name=”plugins”>
+              <array>
+            <bean class=”com,github.pagehelper.PageInterceptor”>
+            <property name=”plugins”>
+               <value>
+            </value>
+            </property>
+            </bean>
+            </array>
+            </property>
+            Controller :
+            PageHelper.offersetPage(page.getStart(,5);
+            Int total=(int )new PageInfo<>cs.getTotal();
+            Page.caculateLast(total);
+
+            防止减为负的：setStart  进行一个if 判断
+            链接池的好处是不必每次连接都新建一个连接，可以直接从池中取，节约内存资源
+            连接池：用池来管理Connection  这样可以重复使用 connection。有了池，所以我们就不用自己来创建connection
+            而是通过池来获取Connection对象。当使用完connection调用close 不会真的吧池关闭  而是把Connection归还给池。池就可以子啊利用这个connection对象
+            连接池C3p0链接池  ：
+            数据库连接池的基本思想就是为数据库连接建立一个“缓冲池”。预先在缓冲池中放入一定数量的连接。通过设定连接池最大连接数来防止系统无尽的与数据库连接。
+            ResultMap：比下面的更强大 如果查询出来的列名和pojo的属性名不一致，通过定义一个resultMap对列名和pojo属性名之间作一个映射关系。（高级映射，字段名称可以不一致，通过映射来实现
+            ResultType:只有慢走ORM（object Relational Mapping,）对象映射关系时  数据库表中的字段名和实体类的属性完全一致时才能使用  否则才会出现数据不显示情况
+            CRUD操作：明白了页面间的跳转和jsp页面到controller 之间的跳转。
+            以及之间的重定向   redirect  转发 forward
+            直接请求转发是   forward：
+               客户端和浏览器只发出一次请求，servlet  html  jsp或其它信息资源，由第二个信息资源响应该请求  在请求对象request中  保存的对象对于每个信息资源是共享的
+
+            间接请求转发是   redirect
+               实际是两次HTTP请求，服务器端在相应第一次请求的时候，让浏览器再向另外一个url发出请求  从而能达到转发的目的
+
+            直接转发就相当于：“A找B借钱，B说没有，B去找C借，借到借不到都会把消息传递给A”；
+            　　间接转发就相当于："A找B借钱，B说没有，让A去找C借"。
+
+            将数据集中的图像归一化：让模型更加稳定
+            归一化是将样本的特征值转换到统一量纲下把数据映射到[-1,1]之间。
+
+            什么时候用归一化？什么时候用标准化？
+              （1）如果对输出结果范围有要求，用归一化。
+              （2）如果数据较为稳定，不存在极端的最大最小值，用归一化。
+              （3）如果数据存在异常值和较多噪音，用标准化，可以间接通过中心化避免异常值和极端值的影响。
+
+          半下午+晚上 论文相关准被
+          GRUB是一个来自GNU项目的多操作系统启动程序  (哈哈  偷听到GRUB不知道是啥顺手查了一下。get到了)
 
 
 
