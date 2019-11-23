@@ -469,6 +469,13 @@
             框架来做前后端分离：
             @ResponseBody：这个是将java对象转化为json格式的数据。表示该方法的返回结果直接写入HTTP  response body中  一般在获取数据时使用
             《此处不是很明白》
+
+            @ResponseBody是自动将数据打包成json格式发送出去，但是随着springboot版本的升级,@ResponseBody注解落伍了，取而代之的是@RestController,
+            因为@RestController = @Controller + @ResponseBody，使用这个注解@RestController，数据会自动打包成json数据发出的
+            @equestBody是json对象整体接收,一般用在形参前面,例如:
+                @GetMapping("/v1/get")
+                public void get(@RequestBody UserDto userDto)
+
             什么是Maven：maven是专门用于构建和管理Java相关项目的工具。
             Maven：主要用途：相同的项目结构，统一维护jar包
             使用maven管理java项目都有着相同的项目结构：
