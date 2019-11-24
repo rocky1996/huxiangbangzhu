@@ -307,9 +307,64 @@
             给自己继续喂论文  英文的看着难受的  不看又不行
 
 
+2019.11.23    上午睡懒觉  洗衣服  打扫宿舍卫生
+              下午：
+              Maven  仓库也就是包管理器
+              MAven采用一个仓库  多个项目的方式  让多个项目共享一个仓库里的相同jar
+              首先将Maven的官方提供的服务器下载改为阿里云，都明白 官方服务器在国外下载速度会很慢
+                更改的文件是maven/conf/settings.xml 里面的<mirror></mirror>
+                所以配置文件就可以改为：
+                <mirror>
+                   <id>alimaven</id>
+                   <mirrorOf>central</mirrorOf>
+                   <name>aliyun maven</name>
+                   <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+                </mirror>
 
+               通过maven呢 创建父子项目  这样子项目可以共享父项目的jar包
+               创建maven的子项目需要new  Maven Model
+               Restful：陌生又熟悉
+               首先知道了Method 常用的值为get post 事实上method 还可以put 和 delete
+               Restful是一种网络应用程序的数据风格和开发方式  基于Http  可以使用XML格式定义或者JSON格式定义
+               适用于移动互联网厂商作为业务  基于HTTP  可以使用XML和JSON格式定义  动作类型为新增  变更  删除所条用资源
+               Restful 风格  服务器会根据method 的不同来浏览器期望做的业务行为
 
+                         传统风格                                              Restful风格
+                           url                             method                    url               method
+                增加     /addCategory?name=***              POST              /categories                POST
+                删除     /deleteCategory?id=123             GET               /categories/123            DELETE
+                修改     /updateCategory?id=123&name=yyy    POST              /categories/123            PUT
+                获取     /getCategory?id=123                GET               /categories/123            GET
+                查询     /listCategory                      GET               /categories                GET
 
+                Spring MVC只能处理post get 为了还原put 和 delete 的处理  web.xml里面要加过滤器filter
+                <filter>
+                <filter-name>HiddenHttpMethodFilter</filter-name>
+                <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+                </filter>
+                <filter-mapping>
+                <filter-name>HiddenHttpMethodFilter</filter-name>
+                <url-pattern>/*</url-pattern>
+                </filter-mapping>
+
+               开发项目的流程中数据库表的创建和设计：
+                1.首先创建数据库
+                2.创建需要的表（分析表之间的关系）
+
+                create  database name
+                如果忘了增加主键  外键等
+                alter table category add constraint pk_category_id primary key(id);
+                alter table config change id id int auto_increment;
+               完整的做法：
+               CREATE TABLE record (
+                 id int AUTO_INCREMENT,
+                 spend int,
+                 cid int,
+                 comment varchar(255) ,
+                 date Date,
+                 PRIMARY KEY (id),
+                 CONSTRAINT `fk_record_category` FOREIGN KEY (`cid`) REFERENCES `category` (`id`)
+               )  DEFAULT CHARSET=utf8;
 
 
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/Novermber/DailyTask" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/Novermber/DailyTask" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +40,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bangzhu_2019_10_0.2" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -122,6 +122,8 @@
         <item itemvalue="Application.dailyFrage" />
         <item itemvalue="Application.connectService" />
         <item itemvalue="Application.Apple" />
+        <item itemvalue="Application.dailyFrage" />
+        <item itemvalue="Application.connectService" />
       </list>
     </recent_temporary>
   </component>
@@ -148,6 +150,17 @@
       <workItem from="1573036230834" duration="6905000" />
       <workItem from="1573115070092" duration="11107000" />
       <workItem from="1573177319488" duration="7917000" />
+      <workItem from="1573447506435" duration="4598000" />
+      <workItem from="1573479941852" duration="458000" />
+      <workItem from="1573521474456" duration="6590000" />
+      <workItem from="1573655908865" duration="237000" />
+      <workItem from="1573740285144" duration="1981000" />
+      <workItem from="1574081897853" duration="3735000" />
+      <workItem from="1574174115255" duration="727000" />
+      <workItem from="1574254435486" duration="671000" />
+      <workItem from="1574346157164" duration="1362000" />
+      <workItem from="1574430465181" duration="217000" />
+      <workItem from="1574499242707" duration="2410000" />
     </task>
     <task id="LOCAL-00001" summary="monday task1">
       <created>1571228479929</created>
@@ -268,7 +281,126 @@
       <option name="project" value="LOCAL" />
       <updated>1573221443311</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="github修复1测试">
+      <created>1573447580224</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1573447580225</updated>
+    </task>
+    <task id="LOCAL-00019" summary="测试1.1">
+      <created>1573448821591</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1573448821591</updated>
+    </task>
+    <task id="LOCAL-00020" summary="合并测试">
+      <created>1573449134256</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1573449134256</updated>
+    </task>
+    <task id="LOCAL-00021" summary="测试1.2">
+      <created>1573452536655</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1573452536655</updated>
+    </task>
+    <task id="LOCAL-00022" summary="测试1.3">
+      <created>1573453471200</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1573453471200</updated>
+    </task>
+    <task id="LOCAL-00023" summary="测试1.4">
+      <created>1573453576465</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573453576465</updated>
+    </task>
+    <task id="LOCAL-00024" summary="测试1.5">
+      <created>1573453772503</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1573453772504</updated>
+    </task>
+    <task id="LOCAL-00025" summary="数据集+模型代码">
+      <created>1573480280411</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1573480280411</updated>
+    </task>
+    <task id="LOCAL-00026" summary="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql">
+      <created>1573566428341</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1573566428341</updated>
+    </task>
+    <task id="LOCAL-00027" summary=" java内存模型  网上查合适训练网络  晚上看了部电影《我是谁：没有绝对的安全系统》">
+      <created>1573566495807</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1573566495807</updated>
+    </task>
+    <task id="LOCAL-00028" summary=" Spring的学习  开会再次明确了任务 以及开题里面的一些问题">
+      <created>1573656093300</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1573656093300</updated>
+    </task>
+    <task id="LOCAL-00029" summary="早上学习JMM和顺序一致性内存模型的程序执行    创新基金申请书zhuanxie">
+      <created>1573742139760</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1573742139760</updated>
+    </task>
+    <task id="LOCAL-00030" summary="2019.11.15-2019.11.17&#10;2019.11.18礼拜一的学习情况">
+      <created>1574085002026</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1574085002026</updated>
+    </task>
+    <task id="LOCAL-00031" summary="周二  分页  创新基金  bug">
+      <created>1574174767886</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1574174767887</updated>
+    </task>
+    <task id="LOCAL-00032" summary="今天java没看   主要是GAN网络深入的理解 并试图寻找改进点">
+      <created>1574254893738</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1574254893739</updated>
+    </task>
+    <task id="LOCAL-00033" summary="分页 连接池C3P0 论文相关">
+      <created>1574346841135</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1574346841135</updated>
+    </task>
+    <task id="LOCAL-00034" summary="SSM事务管理&#10;前后端分离大致了解但不是很透彻&#10;论文。。。。">
+      <created>1574430655606</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1574430655606</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,23 +434,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="monday task1" />
-    <MESSAGE value="晚上参加思享汇，心得" />
-    <MESSAGE value="10.22日，修改数据库字段名，参加需求二审" />
-    <MESSAGE value="添加笔记到git中，读取方便" />
-    <MESSAGE value="线程池/剑指offer/redis" />
-    <MESSAGE value="java基础  redis菜鸟教程" />
-    <MESSAGE value="git报警测试" />
-    <MESSAGE value="spring MVC的初练习" />
     <MESSAGE value="spring mvc 的初练" />
     <MESSAGE value="2019.10.31   进行了mybatis的入门练习  进行了数据库单表的增删查改（CRUD）  代码在eclipse中   今天还开了个会上午就没了   学习效率不高" />
     <MESSAGE value="2019.11.1   多条件查询和模糊查询   一对多的关系  多对一" />
     <MESSAGE value="早上开题报告完善，创新点基本成型       下午修改+排版“职点迷津”BP书    git打标签     完成了服务器搭建java环境" />
-    <MESSAGE value="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql" />
     <MESSAGE value="论文+动态sql" />
     <MESSAGE value="mybatis 相关   还有服务器java环境搭建的总结" />
     <MESSAGE value="缓存机制spring mybatis的简单整合" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="github修复1测试" />
+    <MESSAGE value="测试1.1" />
+    <MESSAGE value="合并测试" />
+    <MESSAGE value="测试1.2" />
+    <MESSAGE value="测试1.3" />
+    <MESSAGE value="测试1.4" />
+    <MESSAGE value="测试1.5" />
+    <MESSAGE value="数据集+模型代码" />
+    <MESSAGE value="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql" />
+    <MESSAGE value=" java内存模型  网上查合适训练网络  晚上看了部电影《我是谁：没有绝对的安全系统》" />
+    <MESSAGE value=" Spring的学习  开会再次明确了任务 以及开题里面的一些问题" />
+    <MESSAGE value="早上学习JMM和顺序一致性内存模型的程序执行    创新基金申请书zhuanxie" />
+    <MESSAGE value="2019.11.15-2019.11.17&#10;2019.11.18礼拜一的学习情况" />
+    <MESSAGE value="周二  分页  创新基金  bug" />
+    <MESSAGE value="今天java没看   主要是GAN网络深入的理解 并试图寻找改进点" />
+    <MESSAGE value="分页 连接池C3P0 论文相关" />
+    <MESSAGE value="SSM事务管理&#10;前后端分离大致了解但不是很透彻&#10;论文。。。。" />
+    <option name="LAST_COMMIT_MESSAGE" value="SSM事务管理&#10;前后端分离大致了解但不是很透彻&#10;论文。。。。" />
   </component>
 </project>
