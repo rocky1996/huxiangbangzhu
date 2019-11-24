@@ -217,20 +217,94 @@
 
 
 
-阿斯顿法国红酒
 
 
+            间接请求转发是   redirect
+               实际是两次HTTP请求，服务器端在相应第一次请求的时候，让浏览器再向另外一个url发出请求  从而能达到转发的目的
+
+            直接转发就相当于：“A找B借钱，B说没有，B去找C借，借到借不到都会把消息传递给A”；
+            　　间接转发就相当于："A找B借钱，B说没有，让A去找C借"。
+
+            将数据集中的图像归一化：让模型更加稳定
+            归一化是将样本的特征值转换到统一量纲下把数据映射到[-1,1]之间。
+
+            什么时候用归一化？什么时候用标准化？
+              （1）如果对输出结果范围有要求，用归一化。
+              （2）如果数据较为稳定，不存在极端的最大最小值，用归一化。
+              （3）如果数据存在异常值和较多噪音，用标准化，可以间接通过中心化避免异常值和极端值的影响。
+
+          半下午+晚上 论文相关准被
+          GRUB是一个来自GNU项目的多操作系统启动程序  (哈哈  偷听到GRUB不知道是啥顺手查了一下。get到了)
+
+2019.11.22  事务管理：
+            要知道的是当表的类型为INNODB的时候  才支持事务  所以要把表的类型设置为INNODB，否则无法观察到事务。
+
+            对于数据库的事物而言    应具有创建 提交 回滚  关闭  对应地  MyBatis
+            将事务抽象成了Transaction结构。
+
+            MyBatis的事务管理分为两种形式：
+
+            修改表的类型为INNODB的sql：
+              Alter table category_ ENGINE  = innodb;
+            查看表的类型是：
+            Show table status from how2java;
+            aspectjweaver.jar,这个包用于事务管理
+
+            使用XML配置方式：在applicationContext.xml下
+            <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                    <property name="dataSource" ref="dataSource" />
+                </bean>
+                <tx:advice id="txadvice" transaction-manager="transactionManager"> 
+                    <tx:attributes> 
+                        <tx:method name="add*" propagation="REQUIRED" rollback-for="Exception" /> 
+                        <tx:method name="del*" propagation="REQUIRED" rollback-for="Exception"/>
+                        <tx:method name="edit*" propagation="REQUIRED" rollback-for="Exception" />
+                        <tx:method name="update*" propagation="REQUIRED" rollback-for="Exception"/> 
+                        <tx:method name="list*" propagation="REQUIRED" rollback-for="Exception"/> 
+                    </tx:attributes> 
+                </tx:advice> 
+                <aop:config> 
+                    <aop:pointcut id="serviceMethod" expression="execution(* com.how2java.service.*.*(..))"/> 
+                    <aop:advisor pointcut-ref="serviceMethod" advice-ref="txadvice"/> 
+                </aop:config>    
 
 
+            使用注解的方式进行事务管理：
+            1）applicationContext.xml在后面添加：
+             <tx:annotation-driven transaction-manager="transactionManager"/>
+                <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                    <property name="dataSource" ref="dataSource" />
+                </bean>
+            2) 在方法serviceImpl中的方法添加下面：
+             @Tranactional(propagation=Propagation.REQUIRED,rollbackForClassName=”Exception”)
+            此处的例子是  总共给表里插入两条数据  第一条正常数据   第二条数据超出了定义的数据范围
+            然后就会发现由于第二条数据插不进去  所以第一个数据的插入也回滚了 。
+            如果数据库支持事务，则可以将数据库操作组成一个事务，以防止因这些事件而使数据库出现不一致。如果事务中的某个点发生故障，则所有更新福可以回滚到事务开始之前的状态。如果没有发生故障则通过以完成状态提交事务来完成更新。
 
+            框架来做前后端分离：
+            @ResponseBody：这个是将java对象转化为json格式的数据。表示该方法的返回结果直接写入HTTP  response body中  一般在获取数据时使用
+            《此处不是很明白》
 
+            @ResponseBody是自动将数据打包成json格式发送出去，但是随着springboot版本的升级,@ResponseBody注解落伍了，取而代之的是@RestController,
+            因为@RestController = @Controller + @ResponseBody，使用这个注解@RestController，数据会自动打包成json数据发出的
+            @RequestBody是json对象整体接收,一般用在形参前面,例如:
+                @GetMapping("/v1/get")
+                public void get(@RequestBody UserDto userDto)
 
+            什么是Maven：maven是专门用于构建和管理Java相关项目的工具。
+            Maven：主要用途：相同的项目结构，统一维护jar包
+            使用maven管理java项目都有着相同的项目结构：
+            1.有一个pom.xml用于维护当前项目都用了哪些jar包
+            2.所有的java代码都放在src/main/java
+            3.所有的测试代码都放在src/test/java下面
+            统一维护jar包
+            Maven风格的项目  首先吧所有的jar包都放在“仓库”里，然后哪个项目需要用到这个jar包，住需要给出jar包的名称和版本号就ok了  这样jar包就实现了共享
 
+            Maven仓库：
+            所谓仓库就是存放项目需要的jar包的。
+            Maven采用一个仓库，多个项目的方式，让多个项目共享一个仓库里的相同jar包。
 
-
-
-
-
+            给自己继续喂论文  英文的看着难受的  不看又不行
 
 
 
