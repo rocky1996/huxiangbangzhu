@@ -1,2 +1,8 @@
 2019.12.01(周日)
     1. 惯例一觉睡到自然醒,下午去同学家顺便展现了一下厨艺,晚上回去收拾房子,洗澡,提前写周报。
+
+2019.12.02(周二)
+    1.在本地电脑上面安装kafka和zookeeper环境并调试,找到了一篇不错的博客,简介明了,https://www.cnblogs.com/ultimateWorld/p/11120803.html
+      同时启动两者的命令:zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties & kafka-server-start /usr/local/etc/kafka/server.properties
+    2.编写Spring + Kafka的demo示例。
+    3.给测试那边的老师编写临时接口。
