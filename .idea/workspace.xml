@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql">
+    <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="2019.12.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/Novermber/DailyTask" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/Novermber/DailyTask" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssmTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -161,6 +161,7 @@
       <workItem from="1574346157164" duration="1362000" />
       <workItem from="1574430465181" duration="217000" />
       <workItem from="1574499242707" duration="2410000" />
+      <workItem from="1575378186924" duration="452000" />
     </task>
     <task id="LOCAL-00001" summary="monday task1">
       <created>1571228479929</created>
@@ -400,7 +401,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574430655606</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="2019.12.2">
+      <created>1575297654284</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1575297654284</updated>
+    </task>
+    <task id="LOCAL-00036" summary="2019.12.3">
+      <created>1575378409669</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1575378409669</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,8 +449,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="spring mvc 的初练" />
-    <MESSAGE value="2019.10.31   进行了mybatis的入门练习  进行了数据库单表的增删查改（CRUD）  代码在eclipse中   今天还开了个会上午就没了   学习效率不高" />
     <MESSAGE value="2019.11.1   多条件查询和模糊查询   一对多的关系  多对一" />
     <MESSAGE value="早上开题报告完善，创新点基本成型       下午修改+排版“职点迷津”BP书    git打标签     完成了服务器搭建java环境" />
     <MESSAGE value="论文+动态sql" />
@@ -459,6 +472,8 @@
     <MESSAGE value="今天java没看   主要是GAN网络深入的理解 并试图寻找改进点" />
     <MESSAGE value="分页 连接池C3P0 论文相关" />
     <MESSAGE value="SSM事务管理&#10;前后端分离大致了解但不是很透彻&#10;论文。。。。" />
-    <option name="LAST_COMMIT_MESSAGE" value="SSM事务管理&#10;前后端分离大致了解但不是很透彻&#10;论文。。。。" />
+    <MESSAGE value="2019.12.2" />
+    <MESSAGE value="2019.12.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019.12.3" />
   </component>
 </project>
