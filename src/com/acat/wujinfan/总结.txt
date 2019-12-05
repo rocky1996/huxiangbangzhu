@@ -1,0 +1,3 @@
+查看端口有没有被别的进程占用:
+    1.lsof -i:8080
+    2.netstat -tunpl|grep 8080
