@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="2019.12.2">
+    <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" afterDir="false" />
     </list>
@@ -77,13 +77,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.dailyFrage">
+  <component name="RunManager" selected="Application.Selection_sort">
     <configuration name="Apple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.acat.wujinfan.Apple" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.acat.wujinfan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Bubble_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Bubble_sort" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Selection_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Selection_sort" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Selection_sort" />
+        <item itemvalue="Application.Bubble_sort" />
         <item itemvalue="Application.dailyFrage" />
         <item itemvalue="Application.connectService" />
         <item itemvalue="Application.Apple" />
-        <item itemvalue="Application.dailyFrage" />
-        <item itemvalue="Application.connectService" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +187,12 @@
       <workItem from="1574346157164" duration="1362000" />
       <workItem from="1574430465181" duration="217000" />
       <workItem from="1574499242707" duration="2410000" />
-      <workItem from="1575378186924" duration="452000" />
+      <workItem from="1575378186924" duration="585000" />
+      <workItem from="1575426388622" duration="1709000" />
+      <workItem from="1575515284953" duration="1848000" />
+      <workItem from="1575616610135" duration="3691000" />
+      <workItem from="1575641332645" duration="107000" />
+      <workItem from="1575728366264" duration="466000" />
     </task>
     <task id="LOCAL-00001" summary="monday task1">
       <created>1571228479929</created>
@@ -415,7 +446,28 @@
       <option name="project" value="LOCAL" />
       <updated>1575378409669</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="2019.12.3">
+      <created>1575378656107</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1575378656107</updated>
+    </task>
+    <task id="LOCAL-00038" summary="2019.12.4">
+      <created>1575465310422</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1575465310422</updated>
+    </task>
+    <task id="LOCAL-00039" summary="2019.12.5-2019.12.6">
+      <created>1575639705715</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1575639705715</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,8 +501,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2019.11.1   多条件查询和模糊查询   一对多的关系  多对一" />
-    <MESSAGE value="早上开题报告完善，创新点基本成型       下午修改+排版“职点迷津”BP书    git打标签     完成了服务器搭建java环境" />
     <MESSAGE value="论文+动态sql" />
     <MESSAGE value="mybatis 相关   还有服务器java环境搭建的总结" />
     <MESSAGE value="缓存机制spring mybatis的简单整合" />
@@ -474,6 +524,8 @@
     <MESSAGE value="SSM事务管理&#10;前后端分离大致了解但不是很透彻&#10;论文。。。。" />
     <MESSAGE value="2019.12.2" />
     <MESSAGE value="2019.12.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019.12.3" />
+    <MESSAGE value="2019.12.4" />
+    <MESSAGE value="2019.12.5-2019.12.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019.12.5-2019.12.6" />
   </component>
 </project>
