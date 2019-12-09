@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/December/Quick_sort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" afterDir="false" />
     </list>
@@ -77,13 +78,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Selection_sort">
-    <configuration name="Apple" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.wujinfan.Apple" />
+  <component name="RunManager" selected="Application.Quick_sort">
+    <configuration name="Bubble_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Bubble_sort" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.acat.wujinfan.*" />
+          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,8 +92,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Bubble_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Bubble_sort" />
+    <configuration name="Insert_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Insert_sort" />
+      <module name="huxiangbanzhu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Quick_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Quick_sort" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
@@ -117,19 +131,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="connectService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.October.friday.connectService" />
-      <module name="huxiangbanzhu" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.acat.lijingwen.October.friday.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dailyFrage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.dailyFrage" />
       <module name="huxiangbanzhu" />
@@ -145,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Quick_sort" />
+        <item itemvalue="Application.Insert_sort" />
         <item itemvalue="Application.Selection_sort" />
         <item itemvalue="Application.Bubble_sort" />
         <item itemvalue="Application.dailyFrage" />
-        <item itemvalue="Application.connectService" />
-        <item itemvalue="Application.Apple" />
       </list>
     </recent_temporary>
   </component>
@@ -193,6 +194,7 @@
       <workItem from="1575616610135" duration="3691000" />
       <workItem from="1575641332645" duration="107000" />
       <workItem from="1575728366264" duration="466000" />
+      <workItem from="1575898830416" duration="3112000" />
     </task>
     <task id="LOCAL-00001" summary="monday task1">
       <created>1571228479929</created>
@@ -467,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575639705715</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="2019.12.8">
+      <created>1575816123984</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1575816123984</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="论文+动态sql" />
     <MESSAGE value="mybatis 相关   还有服务器java环境搭建的总结" />
     <MESSAGE value="缓存机制spring mybatis的简单整合" />
     <MESSAGE value="." />
@@ -526,6 +534,7 @@
     <MESSAGE value="2019.12.3" />
     <MESSAGE value="2019.12.4" />
     <MESSAGE value="2019.12.5-2019.12.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019.12.5-2019.12.6" />
+    <MESSAGE value="2019.12.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019.12.8" />
   </component>
 </project>
