@@ -1,3 +1,10 @@
-查看端口有没有被别的进程占用:
+1.查看端口有没有被别的进程占用:
     1.lsof -i:8080
     2.netstat -tunpl|grep 8080
+2.查看某进程或者pid的占用情况
+    1.ps -aux | grep 00000
+3.查看某pid的cpu占比情况
+    1.cat /proc/0000/status,其中(VmRSS)为进程所占用的内存
+4.top k问题,http://doc.okbase.net/zyq522376829/archive/169290.html
+           https://www.jianshu.com/p/4427db9337d7
+5.复杂度计算总结,https://blog.csdn.net/ProMonkey_chen/article/details/100525740
