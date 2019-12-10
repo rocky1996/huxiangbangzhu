@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/December/Quick_sort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" afterDir="false" />
     </list>
@@ -194,7 +193,8 @@
       <workItem from="1575616610135" duration="3691000" />
       <workItem from="1575641332645" duration="107000" />
       <workItem from="1575728366264" duration="466000" />
-      <workItem from="1575898830416" duration="3112000" />
+      <workItem from="1575898830416" duration="3196000" />
+      <workItem from="1575989091571" duration="169000" />
     </task>
     <task id="LOCAL-00001" summary="monday task1">
       <created>1571228479929</created>
@@ -476,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575816123984</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="2019.12.9">
+      <created>1575902523075</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1575902523076</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mybatis 相关   还有服务器java环境搭建的总结" />
     <MESSAGE value="缓存机制spring mybatis的简单整合" />
     <MESSAGE value="." />
     <MESSAGE value="github修复1测试" />
@@ -535,6 +541,7 @@
     <MESSAGE value="2019.12.4" />
     <MESSAGE value="2019.12.5-2019.12.6" />
     <MESSAGE value="2019.12.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019.12.8" />
+    <MESSAGE value="2019.12.9" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019.12.9" />
   </component>
 </project>
