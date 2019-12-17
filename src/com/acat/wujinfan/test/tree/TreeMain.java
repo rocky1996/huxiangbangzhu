@@ -12,17 +12,11 @@ public class TreeMain {
     public static void main(String[] args) {
         //按照图片组装树
         TreeNode G = new TreeNode(null, null, "G");
-
         TreeNode F = new TreeNode(null, null, "F");
-
         TreeNode E = new TreeNode(null, null, "E");
-
         TreeNode D = new TreeNode(null, null, "D");
-
         TreeNode C = new TreeNode(F, G, "C");
-
         TreeNode B = new TreeNode(D, E, "B");
-
         TreeNode A = new TreeNode(B, C, "A");
 
         System.out.println("先序遍历");
