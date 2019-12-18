@@ -44,7 +44,7 @@ public class TreeMain {
         System.out.print(node.getDate());
     }
 
-    //先序遍历,根左右,[A,B,D,E,C,F,G]
+    //先序遍历,根左右,[A,B,D,E,C,F,G](深度遍历)
     public static void FirstTraversal(TreeNode root){
         printNode(root);
         if(root.getLeftNode() != null){
@@ -55,7 +55,7 @@ public class TreeMain {
         }
     }
 
-    //中序遍历,左根右,[D,B,E,A,F,C,G]
+    //中序遍历,左根右,[D,B,E,A,F,C,G](深度遍历)
     public static void InOrderTraversal(TreeNode root){
         if(root.getLeftNode() != null){
             InOrderTraversal(root.getLeftNode());
@@ -66,7 +66,7 @@ public class TreeMain {
         }
     }
 
-    //后序遍历,左右根,[D,E,B,F,G,C,A]
+    //后序遍历,左右根,[D,E,B,F,G,C,A](深度遍历)
     public static void PostOrderTraversal(TreeNode root){
         if(root.getLeftNode() != null) {
             PostOrderTraversal(root.getLeftNode());
@@ -82,6 +82,7 @@ public class TreeMain {
     /**
      * 先将根节点入队，当前节点是队头节点，将其出队并访问，如果当前节点的左节点不为空将左节点入队，如果当前节点的右节点不为空将其入队。所以出队顺序也是从左到右依次出队。
      * @param root
+     * (广度遍历)
      */
     private static void levelOrder(TreeNode root){
         if(root == null){
@@ -112,6 +113,7 @@ public class TreeMain {
      * 指向入队的节点，左右儿子入队之后判断当前的节点是否等于lastNode，如果是则打印换行符，并且将lastNode指向下一层最后一个节点，即lastNode=nextLevelLastNode。
      * 具体实现如下：
      * @param root
+     * (广度遍历)
      */
     private static void BFSTraverse(TreeNode root){
         if(root == null){
