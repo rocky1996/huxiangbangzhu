@@ -8,3 +8,5 @@
 4.top k问题,http://doc.okbase.net/zyq522376829/archive/169290.html
            https://www.jianshu.com/p/4427db9337d7
 5.复杂度计算总结,https://blog.csdn.net/ProMonkey_chen/article/details/100525740
+
+明日:明天整理两个堆栈模拟一个队列,这块得重新走一遍。
