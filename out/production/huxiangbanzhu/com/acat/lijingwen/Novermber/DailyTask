@@ -1,0 +1,381 @@
+2019.11.2   早上早起大致复习了信息方面的基本规则     下午考了一个半小时的试，但是竟然做了5小时的车，自闭了
+2019.11.3   看了老师推荐的GAN相关资料  下午打了会球
+2019.11.4   早上开题报告完善，创新点基本成型       下午修改+排版“职点迷津”BP书   git打标签     完成了服务器搭建java环境
+            git  打标签的原因/目的：标记提交的版本  容易查找  会和某次提交绑在一起
+            廖雪峰：发布版本时 我们通常在版本库中打一个标签，这样就唯一确定了打标签时刻的版本。
+            将来无论什么时候，就是把那个标签的时刻的历史版本取出来。所以标签也是版本库的一个快照。
+            GIT的标签虽然是版本库的快照，但其实他就是只想某个commit的指针。虽然很像分支但是分支可以移动标
+            签不可移动，所以创建和删除标签都市瞬间完成的。
+            还有为什么commit存在还要引入tag？因为commit号是一串数字字符的混合体，tag直接找版本号就ok
+
+            注意的是：标签总和某个commit挂钩  如果这个commit即出现在master分支 有出现在dev分支 那么这两个分支上都可以看到这个标签
+            git tag -d (tag-name)删除tag
+            git push origin <tagname> 推送某个标签到远程
+            git push origin --tags  一次性推送全部尚未推送到远程的本地标签
+            git push oorigin :refs/tags/tagname   当将标签推送到远程后想要删除需要使用下面的命令。
+            git tag (tag-name)创建tag
+            git branch  显示分支
+            git  log  --pretty =oneline --abbrev-commit 显示提交日志
+            git checkout branchname 在Git中打标签非常简单，首先，切换到需要打标签的分支上：
+            git show tagname  显示tag的相关信息
+            git tag -a <tagname> -m "blablabla"可以指定标签信息
+            git  tag  october_V  166c64a  给某次提交打标签  比方说要对add merge这次提交打标签，它对应的commit id是f52c633，敲入命令
+
+            linux(centos) 保存退出vi编辑
+            保存命令
+            按ESC键 跳到命令模式，然后：
+            :w   保存文件但不退出vi
+            :w file 将修改另外保存到file中，不退出vi
+            :w!  强制保存，不推出vi
+            :wq  保存文件并退出vi
+            :wq! 强制保存文件，并退出vi
+            q:  不保存文件，退出vi
+            :q! 不保存文件，强制退出vi
+            :e! 放弃所有修改，从上次保存文件开始再编辑
+2019.11.05   早上继续开题报告的完善     下午打印了一下午材料   晚上学习动态sql
+2019.11.06   推翻了之前的评价方式，找了一天的生成图像评价方法，最终得出还是用经典的  PSVR、SSIM 来做评价。晚上动态sql从set继续向下学。
+
+
+            <where></where>用在  select语句里面比较多
+            <set></set>set用在update里面
+
+            //trim  用来定制想要功能，可以完成set 和 where 标记功能
+            <trim prefix="WHERE" prefixoverride="AND|OR">
+            prefixoverride:去掉第一个and 或者是 or
+            <trim prefix="set" suffixoverride="," suffix="where id = #{id}">
+            suffixoverride  去掉最后一个逗号（也可以是其他的标记，就像是上面前缀中的and 一样）suffix 后缀
+            //比如where 标签就可以用
+            <trim prefix="where" prefixOverrides="AND | OR">
+
+            </trim>
+           //比如 set标签
+           <trim prefix="set" suffixOverides=",">
+           </trim>
+
+          ********************* if else *************************
+           Mybatis里面没有else标签  但是可以使用when otherwise 标签来达到这样效果
+
+          *****************<foreach>包含以下属性 *****************
+          collection：必填，值为要迭代循环的集合类型  这个属性值的情况有很多
+          item：变量名 值为从迭代对象中取出的每一个值
+          index:索引的属性名在集合数组情况下为当前索引值；当迭代对象是map时，这个值为map的key
+          open：整个循环内容的开头字符串
+          close：整个循环内容的结尾字符串
+          separator：每个循环的分隔符
+           select  * from product_   where id in
+          <foreach item="item" index="index" collection="list" open="("separator=","close=")">
+             #{item}
+          </foreach>
+
+          这段代码的意思是  item 是占位符  完了对于需要查询的id的占位用
+           open="("     separator=","    close=")"
+           where id in('1','3','5')   各占位之间用‘,’分开 open于 (     close于 )
+
+         *******************bind 标签类似与做字符串的拼接***************
+                 <select id ="bindone"  resultType="Product" >
+                     <bind name=" likename" value="'%' + name + '%'"  />
+                     select * from   product_  where name like #{likename}
+                 </select>
+
+
+                  <select id="bindProduct" resultType="Product">
+              		 <bind name="likename"  value="'%' + name + '%'" />
+              		 select  *  from   product_  where name like #{likename}
+              	 </select>
+
+              	  这两段 上面的<select></select>哪里有问题勒？
+2019.11.07  注解  日志
+
+          log4j  用于记录调试信息
+          *************日志*************
+          日志级别可观察，一共有6个级别 TRACE DEBUG(可见) INFO WARN ERROR FATAL
+                 logger.trace("跟踪信息");
+                 logger.debug("调试信息");
+                 logger.info("输出信息");
+                 logger.warn("警告信息");
+                 logger.error("错误信息");
+                 logger.fatal("致命信息");
+
+          输出格式：
+                 %c  输出日志信息所属的类的全名
+                 %d  输出日志时间点的日期或时间，默认格式是ISO8601 也可以在其后制定格式
+                 %f  输出日志信息所属的类的类名
+                 %l  输出日志事件的发生位置  技术处日志新ixde语句处于它所在的类的第几行
+                 %m  输出代码中制定的信息 如 log(message)  中的message
+                 %n  输出一个回车换行符  windows平台为rn  Unix 平台为n
+                 %p  输出优先级
+                 %r  输出自应用 启动到输出该日志信息所含非的毫秒数
+                 %t  输出产生该日志时间的线程名
+                 %5p [%t] (%F:%L) - %m%n 就表示
+                 宽度是5的优先等级 线程名称 (文件名：行号)-信息  回车换行
+          除了使用log4j.properties还可以使用xml格式进行配置
+
+           # Global logging configuration
+           log4j.rootLogger=debug, stdout
+           # MyBatis logging configuration...
+           #mybatis 的日志设置mybatis这个包的局部日志级别是trace
+           # 因为sql语句属于trace  ，所以设置了一个局部的日志级别以便输出执行sql语句的信息
+           log4j.logger.maybatis.how2java=TRACE
+           # Console output...
+           log4j.appender.stdout=org.apache.log4j.ConsoleAppender   #也就是到控制台
+           log4j.appender.stdout.layout=org.apache.log4j.PatternLayout  #布局
+           log4j.appender.stdout.layout.ConversionPattern=%5p [%t] - %m%n  #输出格式
+
+            *************事务管理************
+            同一个事务中  要是有一条语句出错其他的语句也完成不了 (此时有个条件  那就是表的类型 必须为Innodb  其他类型第一条数据仍然可以插入)
+            Mysql中 只有当表的类型是INNODB  的时候  才支持事务  所以需要把表category_  的
+            类型设置为INNODB，否则无法观察到事务
+            修改表类型是
+            alter  table  tablename ENGINE = innodb
+            查看表的类型的sql
+            show  table status  from  how2java;
+
+            *************延迟加载*************
+             作用是个啥？
+             在进行数据查询时，为了提高数据库查询性能尽量使用单表查询，因为单表查询比多表查询速度要快
+             如果查询单表就可以满足需求，一开始先查询单表，当需要关联信息时，在关联查询，当需要关联信息在查询
+             这个就叫延迟加载。mybatis 提供延迟加载的功能用于service层
+             resultType 将查询结果按照sql列名pojo属性名一致映射到pojo中。
+             lazyLoadingEnabled 全局性设置懒加载   如果设为‘false’则所有相关联的都会被初始化加载
+             aggressiveLazyLoading  当设置为 true  的时候，懒加载的对象可能被任何懒属性全部加载。否则，每个属性都按需加载。
+
+             ***********Mybatis分页**********************
+            XML方式
+            <select id="PageTest"  reslutType="Category" >
+                  select * from category_
+                  <if test="start!=null and count!=null">
+                      limit #{start},#{count}
+                  </if>
+            </select>
+
+            注解方式
+            @Select("select * from category_ limit #{start},#{count}")
+            public List<Category> listByFenye(@Param("start") int start,Param("count") int count);
+
+             插件  PageHelper  是分页插件 分页开发会更加便捷
+
+            需要用到两个插件jsqlparser   pagehelper
+
+            ***在测试插件的时候遇到了灵异事件  将方法全都注释掉竟然还是跑出来之前的东西  请赐予我一张符吧
+
+2019.11.07  /****************Mybatis的一级缓存*********************
+            一级缓存 基于Sqlsession默认开启  在操作数据库时需要构造Sqlsession在对象中有一个HashMap
+            用于存储缓存数据。不同的sqlsession之间缓存数据区域是互相不影响的
+            一级缓存的作用是sqlsession 范围的  当在同一个sqlsession中执行两次相同的sql、语句
+            第一次执行完毕会将数据库中查询的数据写到缓存。
+            第二次查询时会从缓存中获取数据，不再去底层数据库查询  从而能提高查询效率
+            但是如果sqlsession  不同
+                    sqlsession 相同 查询条件不同（当前一级缓存中还没有这个数据）
+                    sqlsession相同 两次查询之间执行了增删改操作（可能会对当前数据有影响）
+                    sqlsession相同 手动清楚了一级缓存
+                等着情况的出现  一级缓存将会失去其作用。
+
+            ******************二级缓存*****************
+            启动二级缓存
+            这个是在mybatis-config.xml中
+            <setting name="cacheEnable" value="true"/>
+            这个是在 mapper.xml中
+            <cache/>以启动对Category对象的二级缓存
+            让pojo实现序列化  让Category 实现序列化接口
+
+            在同一个sessionFactory  下查询id=1的数据  只有第一次需要执行sql语句以后都是从缓存中取出。
+            ******数据库连接池*****
+            数据库连接池的必要性
+            在使用开发基于数据库的web程序时
+                 是建立数据库链接进行sql操作
+                 断开数据库连接
+            这种方式的弊端是：对于每一次数据库连接 使用完后都得断开 否则如果程序出现异常而未能关闭将会导致数据库系统中的内存泄漏，最终导致重启数据库
+            这种开发不能控制被创建的连接对象数，系统资源会被毫无顾及的分配出去，如果连接过多 也可能导致内存泄漏  服务器崩溃
+
+
+           数据库连接池：为数据库连接建立一个“缓冲池”。预先在缓冲池中放入一定数量的连接，当需要建立数据库链接时，只需从“缓冲池”
+           中取出一个，使用完毕之后再放回去。
+           数据库连接池负责分配管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是重新建立
+           一个
+           数据库连接池在初始化时创建一定数量的数据库连接放到连接池中，这些数据库连接的数量是由最小数据库连接数来设定
+           无论这些数据库连接是否被使用连接池都将一直保证至少拥有折磨多的链接数量，连接池的最大数据库连接数量
+           限定了这个连接池能占有的最大连接数，当应用程序向连接池请求的连接数超过对打连接数量时，这些请求将被加入到等待队列中
+           数据库连接池优点：资源重用 （避免了重复创建链接）
+                            更快的系统反应速度（在已经创建了若干数据库连接池，避免了数据库连接初始化和释放过程的时间开销）
+                            新的资源分配手段对于多应用共享同一数据库的系统而言
+                            统一的连接管理
+
+           ******************Spring  和  Mybatis 的整合**********
+
+              这里主要明白了
+                    几个注解的用法
+                    以及spring mybatis 整合及运行原理
+                    注解
+                     单个文件：
+                     ContextConfiguration(Location="../applicationContext.xml")
+                     ContextConfiguration(classes = SimpleConfiguration.class)
+                     多个文件：
+                     ContextConfiguration{"classpath*:/spring1.xml","classpath*:/spring2.xml"}
+
+                     namespace 绑定接口  可以不用写接口实现类  mybatis会通过该绑定自动帮你找到对应要执行的sql
+                     这也就是catgory.xml 添加 <mapper namespace="com.how2java.mapper.CategoryMapper">的原因
+
+
+
+
+
+            间接请求转发是   redirect
+               实际是两次HTTP请求，服务器端在相应第一次请求的时候，让浏览器再向另外一个url发出请求  从而能达到转发的目的
+
+            直接转发就相当于：“A找B借钱，B说没有，B去找C借，借到借不到都会把消息传递给A”；
+            　　间接转发就相当于："A找B借钱，B说没有，让A去找C借"。
+
+            将数据集中的图像归一化：让模型更加稳定
+            归一化是将样本的特征值转换到统一量纲下把数据映射到[-1,1]之间。
+
+            什么时候用归一化？什么时候用标准化？
+              （1）如果对输出结果范围有要求，用归一化。
+              （2）如果数据较为稳定，不存在极端的最大最小值，用归一化。
+              （3）如果数据存在异常值和较多噪音，用标准化，可以间接通过中心化避免异常值和极端值的影响。
+
+          半下午+晚上 论文相关准被
+          GRUB是一个来自GNU项目的多操作系统启动程序  (哈哈  偷听到GRUB不知道是啥顺手查了一下。get到了)
+
+2019.11.22  事务管理：
+            要知道的是当表的类型为INNODB的时候  才支持事务  所以要把表的类型设置为INNODB，否则无法观察到事务。
+
+            对于数据库的事物而言    应具有创建 提交 回滚  关闭  对应地  MyBatis
+            将事务抽象成了Transaction结构。
+
+            MyBatis的事务管理分为两种形式：
+
+            修改表的类型为INNODB的sql：
+              Alter table category_ ENGINE  = innodb;
+            查看表的类型是：
+            Show table status from how2java;
+            aspectjweaver.jar,这个包用于事务管理
+
+            使用XML配置方式：在applicationContext.xml下
+            <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                    <property name="dataSource" ref="dataSource" />
+                </bean>
+                <tx:advice id="txadvice" transaction-manager="transactionManager"> 
+                    <tx:attributes> 
+                        <tx:method name="add*" propagation="REQUIRED" rollback-for="Exception" /> 
+                        <tx:method name="del*" propagation="REQUIRED" rollback-for="Exception"/>
+                        <tx:method name="edit*" propagation="REQUIRED" rollback-for="Exception" />
+                        <tx:method name="update*" propagation="REQUIRED" rollback-for="Exception"/> 
+                        <tx:method name="list*" propagation="REQUIRED" rollback-for="Exception"/> 
+                    </tx:attributes> 
+                </tx:advice> 
+                <aop:config> 
+                    <aop:pointcut id="serviceMethod" expression="execution(* com.how2java.service.*.*(..))"/> 
+                    <aop:advisor pointcut-ref="serviceMethod" advice-ref="txadvice"/> 
+                </aop:config>    
+
+
+            使用注解的方式进行事务管理：
+            1）applicationContext.xml在后面添加：
+             <tx:annotation-driven transaction-manager="transactionManager"/>
+                <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                    <property name="dataSource" ref="dataSource" />
+                </bean>
+            2) 在方法serviceImpl中的方法添加下面：
+             @Tranactional(propagation=Propagation.REQUIRED,rollbackForClassName=”Exception”)
+            此处的例子是  总共给表里插入两条数据  第一条正常数据   第二条数据超出了定义的数据范围
+            然后就会发现由于第二条数据插不进去  所以第一个数据的插入也回滚了 。
+            如果数据库支持事务，则可以将数据库操作组成一个事务，以防止因这些事件而使数据库出现不一致。如果事务中的某个点发生故障，则所有更新福可以回滚到事务开始之前的状态。如果没有发生故障则通过以完成状态提交事务来完成更新。
+
+            框架来做前后端分离：
+            @ResponseBody：这个是将java对象转化为json格式的数据。表示该方法的返回结果直接写入HTTP  response body中  一般在获取数据时使用
+            《此处不是很明白》
+
+            @ResponseBody是自动将数据打包成json格式发送出去，但是随着springboot版本的升级,@ResponseBody注解落伍了，取而代之的是@RestController,
+            因为@RestController = @Controller + @ResponseBody，使用这个注解@RestController，数据会自动打包成json数据发出的
+            @RequestBody是json对象整体接收,一般用在形参前面,例如:
+                @GetMapping("/v1/get")
+                public void get(@RequestBody UserDto userDto)
+
+            什么是Maven：maven是专门用于构建和管理Java相关项目的工具。
+            Maven：主要用途：相同的项目结构，统一维护jar包
+            使用maven管理java项目都有着相同的项目结构：
+            1.有一个pom.xml用于维护当前项目都用了哪些jar包
+            2.所有的java代码都放在src/main/java
+            3.所有的测试代码都放在src/test/java下面
+            统一维护jar包
+            Maven风格的项目  首先吧所有的jar包都放在“仓库”里，然后哪个项目需要用到这个jar包，住需要给出jar包的名称和版本号就ok了  这样jar包就实现了共享
+
+            Maven仓库：
+            所谓仓库就是存放项目需要的jar包的。
+            Maven采用一个仓库，多个项目的方式，让多个项目共享一个仓库里的相同jar包。
+
+            给自己继续喂论文  英文的看着难受的  不看又不行
+
+
+2019.11.23    上午睡懒觉  洗衣服  打扫宿舍卫生
+              下午：
+              Maven  仓库也就是包管理器
+              MAven采用一个仓库  多个项目的方式  让多个项目共享一个仓库里的相同jar
+              首先将Maven的官方提供的服务器下载改为阿里云，都明白 官方服务器在国外下载速度会很慢
+                更改的文件是maven/conf/settings.xml 里面的<mirror></mirror>
+                所以配置文件就可以改为：
+                <mirror>
+                   <id>alimaven</id>
+                   <mirrorOf>central</mirrorOf>
+                   <name>aliyun maven</name>
+                   <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+                </mirror>
+
+               通过maven呢 创建父子项目  这样子项目可以共享父项目的jar包
+               创建maven的子项目需要new  Maven Model
+               Restful：陌生又熟悉
+               首先知道了Method 常用的值为get post 事实上method 还可以put 和 delete
+               Restful是一种网络应用程序的数据风格和开发方式  基于Http  可以使用XML格式定义或者JSON格式定义
+               适用于移动互联网厂商作为业务  基于HTTP  可以使用XML和JSON格式定义  动作类型为新增  变更  删除所条用资源
+               Restful 风格  服务器会根据method 的不同来浏览器期望做的业务行为
+
+                         传统风格                                              Restful风格
+                           url                             method                    url               method
+                增加     /addCategory?name=***              POST              /categories                POST
+                删除     /deleteCategory?id=123             GET               /categories/123            DELETE
+                修改     /updateCategory?id=123&name=yyy    POST              /categories/123            PUT
+                获取     /getCategory?id=123                GET               /categories/123            GET
+                查询     /listCategory                      GET               /categories                GET
+
+                Spring MVC只能处理post get 为了还原put 和 delete 的处理  web.xml里面要加过滤器filter
+                <filter>
+                <filter-name>HiddenHttpMethodFilter</filter-name>
+                <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+                </filter>
+                <filter-mapping>
+                <filter-name>HiddenHttpMethodFilter</filter-name>
+                <url-pattern>/*</url-pattern>
+                </filter-mapping>
+
+               开发项目的流程中数据库表的创建和设计：
+                1.首先创建数据库
+                2.创建需要的表（分析表之间的关系）
+
+                create  database name
+                如果忘了增加主键  外键等
+                alter table category add constraint pk_category_id primary key(id);
+                alter table config change id id int auto_increment;
+               完整的做法：
+               CREATE TABLE record (
+                 id int AUTO_INCREMENT,
+                 spend int,
+                 cid int,
+                 comment varchar(255) ,
+                 date Date,
+                 PRIMARY KEY (id),
+                 CONSTRAINT `fk_record_category` FOREIGN KEY (`cid`) REFERENCES `category` (`id`)
+               )  DEFAULT CHARSET=utf8;
+
+
+
+11.25-11.30   迷茫这不知道怎么写论文  最后还是决定阅读论文   总共看了3篇论文  共计30多页吧 进行了硬翻译 虽然有翻译插件沙拉查词  但是对于英语很菜的我简直每天就像催眠一样，还有时候看不懂想着翻译这干啥  好像浪费时间而且依旧没进展
+              但是还是翻完了 虽然收获依旧不大  但是对于写论文  大致有了一点点的万分之一的思路吧哈哈哈   确实还是很迷  决定如果在优化这方面做不到多好的话  试着将图像迁移应用到视频上 毕竟抖音的视频风格不咋滴真实。
+              然后呢就是  这礼拜两拨朋友陪我吃了两顿好吃的   还是比较开心  毕竟还见了一个三年多没见的高中小伙伴，还有个五年没见的同班同学，似乎变得不多  几年不见也不尴尬  开始有点不过后面讲起来他们感兴趣的事情还是依旧“霸气侧漏”。
+              后面赶紧完成论文的初步构思    还有这周开始在IDEA上准备用SSM实现个淘宝网站 但是目前前端还是有问题，后端还是迷迷糊糊  长进不大，自己好菜啊  看到实验室的学弟学妹找工作我就越觉得自己菜，和刚来实验室的感觉有点像  但是现在没有开始那会
+              那莫慌了 不知道是好还是坏   托尼卡酷，干巴雷
+
+
+
+
+
+

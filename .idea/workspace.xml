@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8679329a-28ed-42be-a554-48d5bf90c989" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/acat/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/Util/StringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/User2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Maopao1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Xuanze.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Zheban.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/string.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/zifuchuan/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/zifuchuan/Test01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/lijingwen/December/december" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/acat/wujinfan/2020_02-03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/2020_02-03.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/acat/wujinfan/test/tree/TreeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/acat/wujinfan/test/tree/TreeMain.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +38,23 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/acat/Util/StringUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,20 +63,82 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bcde</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/test/TreeNode.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/2020_02-03.txt" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/Test.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/User2.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/User.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Maopao1.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Zheban.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Xuanze.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/zifuchuan/ListNode.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/zifuchuan/Test01.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/wujinfan/test/tree/TreeMain.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/Main2.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/Util/UtilEntity.java" />
+        <option value="$PROJECT_DIR$/src/com/acat/Util/StringUtil.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectId" id="1SsIKQCWALOJcbX01ydSGH7cKvp" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huxiangbangzhu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huxiangbangzhu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="acat" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -77,13 +166,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Quick_sort">
-    <configuration name="Bubble_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Bubble_sort" />
+  <component name="RunManager" selected="Application.StringUtil">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.Main" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
+          <option name="PATTERN" value="com.acat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +180,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Insert_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Insert_sort" />
+    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.Main2" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
+          <option name="PATTERN" value="com.acat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +193,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Quick_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Quick_sort" />
+    <configuration name="StringUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.Util.StringUtil" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
+          <option name="PATTERN" value="com.acat.Util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +206,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Selection_sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.December.Selection_sort" />
+    <configuration name="Test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.wujinfan.zifuchuan.Test01" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.acat.lijingwen.December.*" />
+          <option name="PATTERN" value="com.acat.wujinfan.zifuchuan.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,12 +219,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dailyFrage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acat.lijingwen.dailyFrage" />
+    <configuration name="Zheban" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.acat.wujinfan.paixu.Zheban" />
       <module name="huxiangbanzhu" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.acat.lijingwen.*" />
+          <option name="PATTERN" value="com.acat.wujinfan.paixu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,11 +234,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Quick_sort" />
-        <item itemvalue="Application.Insert_sort" />
-        <item itemvalue="Application.Selection_sort" />
-        <item itemvalue="Application.Bubble_sort" />
-        <item itemvalue="Application.dailyFrage" />
+        <item itemvalue="Application.StringUtil" />
+        <item itemvalue="Application.Main2" />
+        <item itemvalue="Application.Zheban" />
+        <item itemvalue="Application.Test01" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -483,8 +572,74 @@
       <option name="project" value="LOCAL" />
       <updated>1575902523076</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="3月添加">
+      <created>1585044095347</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1585044095347</updated>
+    </task>
+    <task id="LOCAL-00043" summary="删除tree dir">
+      <created>1585102576245</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1585102576245</updated>
+    </task>
+    <task id="LOCAL-00044" summary="深度遍历二叉树">
+      <created>1585104028273</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1585104028273</updated>
+    </task>
+    <task id="LOCAL-00045" summary="广度遍历二叉树">
+      <created>1585105528912</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1585105528912</updated>
+    </task>
+    <task id="LOCAL-00046" summary="之子形打印">
+      <created>1585107288573</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1585107288573</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22893773" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.12346939" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35816327" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.1744898" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32959184" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -495,6 +650,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -517,11 +678,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="缓存机制spring mybatis的简单整合" />
-    <MESSAGE value="." />
-    <MESSAGE value="github修复1测试" />
-    <MESSAGE value="测试1.1" />
-    <MESSAGE value="合并测试" />
     <MESSAGE value="测试1.2" />
     <MESSAGE value="测试1.3" />
     <MESSAGE value="测试1.4" />
@@ -542,6 +698,206 @@
     <MESSAGE value="2019.12.5-2019.12.6" />
     <MESSAGE value="2019.12.8" />
     <MESSAGE value="2019.12.9" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019.12.9" />
+    <MESSAGE value="3月添加" />
+    <MESSAGE value="删除tree dir" />
+    <MESSAGE value="深度遍历二叉树" />
+    <MESSAGE value="广度遍历二叉树" />
+    <MESSAGE value="之子形打印" />
+    <option name="LAST_COMMIT_MESSAGE" value="之子形打印" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/2020_01.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/test/tree/User.java" />
+    <entry file="file://$USER_HOME$/Desktop/test/tree/TreeMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/test/Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/test/tree/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/2020_02-03.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/test/DuilieDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/Test05.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/LinkedAndMap/Demo1.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/LinkedAndMap/Demo2.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/tree/TreeNode.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/Test04.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/Test03.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/Test02.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/Test01.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/Flower.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/test/DuilieDemo.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/string/Test01.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/test/tree/TreeMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="269" lean-forward="true" selection-start-line="269" selection-end-line="269" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Maopao1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Xuanze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/paixu/Zheban.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/Main2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/test/Test01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/zifuchuan/ListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" selection-start-line="13" selection-start-column="3" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/zifuchuan/Test01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/User2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <element signature="e#201#202#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/wujinfan/string.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/acat/Util/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

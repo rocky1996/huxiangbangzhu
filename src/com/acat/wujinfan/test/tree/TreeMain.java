@@ -22,31 +22,31 @@ public class TreeMain {
         TreeNode B = new TreeNode("B", D, E);
         TreeNode A = new TreeNode("A", B, C);
 
-        System.out.println("先序遍历");
-        TreeMain.FirstTraversal(A);
-
-        System.out.println("中序遍历");
-        TreeMain.InOrderTraversal(A);
-
-        System.out.println("后序遍历");
-        TreeMain.PostOrderTraversal(A);
+//        System.out.println("先序遍历");
+//        TreeMain.FirstTraversal(A);
+//
+//        System.out.println("中序遍历");
+//        TreeMain.InOrderTraversal(A);
+//
+//        System.out.println("后序遍历");
+//        TreeMain.PostOrderTraversal(A);
 
         System.out.println("层次遍历");
         TreeMain.levelOrder(A);
 
-        System.out.println("层次遍历(带换行)");
-        TreeMain.BFSTraverseOne(A);
-
-        System.out.println("二叉树的左视图");
-        TreeMain.BFSLeftTraverse(A);
-
-        System.out.println("层次遍历(带换行)");
-        List<List<String>> list = TreeMain.levelOrderBottom(A);
-        System.out.println(list);
-
-        System.out.println("之字形打印");
-        List<List<String>> list2 = TreeMain.zhizidayin(A);
-        System.out.println(list2);
+//        System.out.println("层次遍历(带换行)");
+//        TreeMain.BFSTraverseOne(A);
+//
+//        System.out.println("二叉树的左视图");
+//        TreeMain.BFSLeftTraverse(A);
+//
+//        System.out.println("层次遍历(带换行)");
+//        List<List<String>> list = TreeMain.levelOrderBottom(A);
+//        System.out.println(list);
+//
+//        System.out.println("之字形打印");
+//        List<List<String>> list2 = TreeMain.zhizidayin(A);
+//        System.out.println(list2);
     }
 
     public static void printNode(TreeNode node) {
@@ -99,7 +99,7 @@ public class TreeMain {
     }
 
     /**
-     * 层次遍历(带换行),ABCDEFG,广度遍历
+     * 层次遍历,ABCDEFG,广度遍历
      *
      * @param root
      */

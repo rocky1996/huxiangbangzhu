@@ -1,0 +1,314 @@
+***********************************************************************************************
+List  set  map都是接口前两个继承与collection（下满还有一个queue 接口 有priorityqueue)  Map为独立的接口
+***********************************************************************************************
+Set有 hashset  linkedhashset tree set
+List 有arraylist  vector  linkedlist
+Map :hashtable   linkedhashmap     hashmap  treemap
+linkedList 既可以实现Queue接口也可以实现list接口。Queue接口窄化了对linkedlist的方法的访问权限，（参数类型是queeu就完全只能访问queue接口所定义的方法，而不能直接访问linkelist的非queue方法）
+Sortedset是个接口，它里面（只有treeset这一个实现可用）的元素有一定顺序
+List有序可重复
+Arraylist
+优点：底层数据结构是数组  查询快增删慢
+缺点：线程不安全，效率好
+Vector
+
+优点：底层数据结构是数组  查询快 增删慢
+缺点：线程安全 效率低
+Linkedlist
+优点  底层数据是链表  查询慢增删快
+缺点：线程不安全  效率高
+Set无序 唯一
+Hashset：无序唯一
+底层数据结构哈希表  唯一性由函数 hashcode（）和equals（）
+Linkedhashset  FIFO插入有序唯一
+底层数据结构是哈希表和链表 有序是链表  唯一是哈希表
+ Treeset  唯一有序
+底层数据结构红黑树  元素排序是自然排序和比较器排序   唯一性根据比较的返回值是否是0   三者都不安全  HashSet插入数据最快，其次LinkHashSet，最慢的是TreeSet因为内部实现排序
+怎样选择collection集合  通过判断你的数据是否唯一 是否安全  是否排序来决定
+唯一肯定用set是否排序hashset无序 linkedhashset和treeset有序
+不唯一list安全性vector是安全的 linkedlist和arraylist是不安全的
+HashSet和LinkHashSet允许存在null数据，但是TreeSet中插入null数据时会报NullPointerException
+如果你知道是Collection集合，但是不知道使用谁，就用ArrayList。
+如果你知道用集合，就用ArrayList。
+如果你知道是List，但是不知道是哪个List，就用ArrayList。
+如果你知道是Set，但是不知道是哪个Set，就用HashSet。
+
+map接口有三个比较重要的实现类 分别是hashmap  treemap  hashtable
+Treemap是有序的
+hashmap（方法不同步，线程不安全，效率高）和hashtable（方法同步，线程安全，效率低）是无序的
+如果对同步性或与遗留代码的兼容性没有任何要求 建议使用hashmap
+Hashtable中的所有public方法声明都有synchronized关键字（同步关键字 ，主要用来处理java中 的同步机制，同步机制就任意时间只能有一个兄弟访问，不会出现两个人同时修改一个变量的情况）
+Hashtable不允许null值，hashmap允许null（key和value都可null）
+Hashtable的父类是dictionary  hashmap是abstractmap
+***********************************************
+框架
+***********************************************
+orm对象映射关系
+pojo是简单的java类它通常是指没有entity beans的普通java对象（实体类）
+ibatis 的sql语句需要自己动手写
+Hibernate的sql能够在程序运行时自动生成，且hibernate可以自动建表。好处就是带着程序在什么机器上都不需要数据库，因为会自动完成。而ibatas就必须有数据库表
+1.Hibernate和Ibatis的区别
+Hibernate的特点：数据库无关性好  O/R(对象/关系)映射能力强， orm实现了pojo和数据库表之间的映射。程序员只需要定义pojo和数据库表之间的映射关系。
+Ibatis的特点： 相对于hiberbate o/r而言 ibatis是一种sql mapping  着力点则在于POJO 与SQL之间的映射关系。
+              IBAtis整个底层数据库查询实际还是要自己写，工作量较大，而且不太容易适应快速数据库修改，
+              当系统属于二次开发，无法对数据库结构做到控制和修改，那IBatis的灵活性将比Hibernate更适合。
+              系统数据处理量巨大，性能要求极为苛刻 这往往意味着我破门必须通过经过高度优化的sql语句 才能达到系统性能设计指标。在这种情况下Ibatis会有更好的可控性和表现。
+2.讲讲 mybatis 的连接池。
+  为什么要使用连接池？
+  答： 创建一个java.sql.connection 对象的代价是很巨大的，是因为创建一个Connetion对象的过程，在底层就相当于和数据库建立的通信连接，在建立通信连接的过程中消耗了这么多的时间，而往往我们建立连接后就执行一个简单的sql然后就要抛弃掉  这是一个非常大的资源浪费！
+  方案：
+  对于需要频繁和数据库交互的应用程序可以在创建 Connection对象 并操作完成数据库后，可以不释放掉资源，
+  而是将其放到内存中，当下次需要操作数据库时 可以直接从内存中取出connection对象  不需要再创建了，这样就极大地节省了创建Connection
+  对象的资源消耗。由于内存也是有限和宝贵的。这又对我们内存中的connnection对象怎么有效地维护提出了很高的要求。我们将在内存中存放Connection对象的容器成为连接池
+
+原理：
+<dataSource type="POOLED">指明使用Mybatis自带数据库连接池
+<transactionManager type="JDBC">指明使用JDBC形式管理事物
+原理分析：
+当Mybatis初始化完成之后根据 上面的配置以及前面的文章知道  环境中的datasource实例是pooledDataSource,环境中的transaction是JDBC transaction
+
+
+poolState 其内部有标识数据库连接池状态的各个属性 重点是两个属性 list<PooledConnection> idleConnections 用于存放空闲状态的数据库连接
+list<PooledConnection> activeConnections 用于存放活动状态的链接 也就是正在使用的数据库的链接
+poolstate 内部有一个Datasourse引用 在poolstate 被实例化时主要用于展示当前数据可链接的一些配置信息  用户名 密码等
+pooledconnection 内部有一个pooleddatasource 同样在pooledconnection被构造时实例化PooledDataSource 的
+private long createdTimestamp  和private long lastUsedTimestamp；用来标识当前pooledconnection的创建时间和最后使用时间用来判断此链接是否过期
+PooledDataSource  简单的线程安全的数据库连接池 对外提供数据库连接池功能
+
+获取PooledConnection
+1先看是否有空闲（idle）状态下的PooledConnection 对象 有酒直接返回一个可用的PooledConnection对象；否则进行2
+2查看活动状态的PooledConnection池activeConnections 是否已满没满则创建一个新的PooledConnection对象
+然后放到activeConnections池中  然后返回此PooledConnection对象；否则进行第三步
+3看最先进入ActiveConnections池中的PooledConnection对象是否已经过期，如果过期从activeConnections池中删除此对象，然后创建一个新的PooledCOnnection对象，添加到activeConnection中，然后将此对象返回否则4
+4线程等待 循环2
+
+
+1先看是否有空闲(idle)状态下的PooledConnection对象，如果有，就直接返回一个可用的PooledConnection对象；否则进行第2步。
+2查看活动状态的PooledConnection池activeConnections是否已满；如果没有满，则创建一个新的PooledConnection对象，然后放到activeConnections池中，然后返回此PooledConnection对象；否则进行第三步；
+3看最先进入activeConnections池中的PooledConnection对象是否已经过期：如果已经过期，从activeConnections池中移除此对象，然后创建一个新的PooledConnection对象，添加到activeConnections中，然后将此对象返回；否则进行第4步。
+4线程等待，循环2步
+
+获取最终数据库连接
+通过PooledConnection.getProxyConnection()来获取最终数据库连接
+this.proxyConnection = (Connection)Proxy.newProxyInstance(Connection.class.getClassLoader(),IFACES,this);
+这里是动态代理模式来使用当前类PooledConnection来代理Connection
+
+数据库连接使用完毕放回连接池：
+为了避免资源浪费：正常使用数据可连接的情况下，当时用完毕之后我们就会调用期间close()方法关闭掉，而是应该将这个数据库连接放回到连接池  我们需要拦截COnnection.close()方法  将这个Connection放回连接池而不是关闭
+使用动态代理的方式实现上述功能。
+
+spring 框架中需要引用哪些 jar 包，以及这些 jar 包的用途
+1.Spring-core.jar:包含spring框架 基本的核心工具类，其他组件都要使用这个包里面的类，是其他组建的核心
+2.Spring-bean.jar是所有应用毒药用到的，包含访问配置文件，管理和创建bean以及进行loC和Di操作所需的相关类。
+{IoC是控制反转   在java中Ioc意味着将你设计好的对象交给容器控制器，而不是传统的在你de对象内部直接控制 谁控制谁？
+当然是IoC 容器控制了对象；控制什么？那就是主要控制了外部资源获取（不只是对象包括比如文件等）。因为由容器帮我们查找及注入依赖对象，
+对象只是被动的接受依赖对象，所以是反转；哪些方面反转了？依赖对象的获取被反转了。
+当有了IoC/DI的容器后，在客户端类中不再主动去创建这些对象了
+DI （Dependency Injection）依赖注入：组建
+谁依赖谁，为什么需要依赖，谁注入谁，注入了什么：
+是应用程序依赖于Ioc容器
+应用程序需要Ioc容器来提供对象需要的外部资源
+很明显loc容器注入应用程序某个对象 应用程序依赖的对象
+注入某个对象所需的外部资源}
+3.spring -aop.jar  包含使用AOP特性时所需的类
+4.Spring-context.jar 为spring 核心提供了大量扩展
+5.Spring—dao.jar 包含spring DAO，springTransaction 进行数据访问的所有类
+6.Spring-hibernate.jar:包含spring 对hibernate2以及hibernate3进行封装的所有类
+7.Spring -jdbc.jar包含spring对JDBC数据库访问进行封装的所有类
+8.Spring-remoting.jar 包含支持EJB  JMS 远程调用Remoting方面的类
+9.Spring-orm.jar：包含多DAO特性级进行了扩展
+10.Spring-support.jar:包含支持缓存cache JAC JMX 邮件服务，任务计划Scheduling方面的类
+11.Spring-web.jar 包含web开发时用到spring框架时所需的核心类
+12.Spring-webmvc.jar包含spring MVC框架的所有；类
+13.Spring -mock.jar :包含spring一整套mock类来辅助应用的测试
+
+
+
+/*spring mvc  10.30  代码在eclipse中  等完了学习IDEA的搭建*/
+ModelAndView mav = new ModelAndView(index.jsp)
+
+视图定位：修改springmvc-servlet.xml
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+   <property name="prefix" value="/WEB-INF/page/" />
+   <property name="suffix" value=".jsp" />
+</bean>
+视图定位后修改controller：ModelAndView  mav = new ModelAndView("index")
+
+/******注解**********
+在springmvc-servlet.xml添加
+组建扫描
+<context:component-scan base-package="controller" />
+/********接受表单数据
+此处用到的是表单提交  el表达式  在jsp页面开始需要添加isELIngnore=“flase”  因为el表达式不能被解析到
+首先在外围Webcontent下创建一个表单的jsp  name必须和pojo的属性值相等
+action中的内容会被接收到controller中的@RequestMapping中   return中返回到show界面
+记住在类名前加上@Controller 的注解
+/****客户端跳转***************
+用到的是redirect
+此处用到的是ModelAndView
+不带参数
+ModelAndView model = new ModelAndView("redirect:/main/index")
+带参数
+public ModelAndView test(String useName){
+  ModelAndView model = new ModelAndView("/main/index");
+  model.addObject("userName",userName);
+  return model;
+}
+
+ViewResolver直接跳转
+不带参数
+@RequestMapping(value="/testredirect",method = { RequestMethod.POST, RequestMethod.GET })
+public  String testredirect(HttpServletResponse response){
+    return "redirect:/index";
+}
+带参数
+@RequestMapping("/testredirect")
+public String testredirect(Model model,RedirectAttributes attr){
+  attr.addAttribute("test","51");
+  attr.addAttribute("u2","single");
+  return "redirect:user/users";
+}
+
+response.sendRedirect重定向跳转
+@RequestMapping(value="/testredirect",method = { RequestMethod.POST, RequestMethod.GET })
+public ModelAndView testredirect(HttpServletResponse response){
+    response.sendRedirect("/index");
+    return null;
+}
+
+/*********如何使用session*********
+
+此处session的使用时session.setAttribute();保存值
+session.getAttribute()取得
+你可以把自己要的数据什么的放在session里面传来传去的
+
+参数是（HttpSession session）
+session.getAttribute()返回的不是int 所以需要强制转化类型Integer
+
+/************中文处理
+在web.xml中做改动
+  <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+SpringMVC会自动检测类发生的变化，但是web.xml做的改动还是必须重启tomcat才可以看到效果
+/*****spring 上传文档
+期间遇到的问题有：jsp文件中form action 的值要与controller中的文件的RequestMapping的值要对应一致
+ <img src="image/${imageName}}"/>
+此段代码因为多写了一个括弧  导致图片上传后显示不出来  是个叉号
+所以 小心小心再小心  细节很重要    这里因为这个括号没发现  反复核实映射路径  查找配置文件等浪费了很多时间
+/******拦截器
+
+
+/********2019.10.31   进行了mybatis的入门练习  进行了数据库单表的增删查改（CRUD）  代码在eclipse中   今天还开了个会上午就没了   学习效率不高
+了解了mybatis的运行流程为
+应用程序找Mybatis要数据
+mybatis从数据库中找来数据
+  通过mybatis-config.xml 来定位那个数据库
+  通过Category.xml执行对应的select语句
+  给予Category.xml把返回的数据库记录封装在Category对象中
+  把多个Category对象装在一个Category集合中
+返回一个Category集合
+Mapper.xml文件
+<mapper namespace="mapper.xml文件的包名">
+      <insert id="此处的id要与应用中调用函数到的id一致（个人理解就是要干什么事）"   parameterType="这里就是参数类型（个人理解为要操作的pojo的类名）因为插入数据是表的所有类型"  >
+        insert into category_ (name) values (#{name})
+      </insert>
+
+      <update id="updatecategory" parameterType="_int" resultType="这里就是参数类型（个人理解为要操作的pojo的类名）因为此处是返回整个表">
+         update category_ set name=#{name} where id=#{id}
+      </update>
+
+      <delete id="deletecategory" parameterType="_int" >
+          delete from category_ where id=#{id}
+      </delete>
+
+      <update id ="category" parameterType="Category">
+          update category_ set name=#{name}  where id=#{id}
+      </update>
+      疑问：parameterType到底怎么写比较好  有时候写的数据类型有的时候写的是pojo的；类名
+      还有resultType
+       insert into category_ (name) values (#{name})
+       update category_ set name=#{name}  where id=#{id}
+</mapper>
+/*********2019.11.1   多条件查询和模糊查询   一对多的关系  多对一
+多条件查询和模糊查询：
+模糊查询：
+<select id="vagueSelect" parameterType="String" resultType="Category">
+    select * from category_ where name like concat('%',#{0},'%')
+</select>
+******************这里有个问题  #{0}表示什么意思
+多条件查询
+<select id="mulselet" parameterType="map" resultType="Category">
+    select * from category_ where id=#{id} and name like concat('%',#{name},'%')
+</select>
+
+一对多：
+通过left join关联查询  对category_和product_表进行关联查询
+与前面学习的有所区别 这里不用resultType 而不是 resultMap把数据取出来放在对应的对象属性里
+Category 的id字段和Product的id 字段同名  Mybatis不知道谁是谁的 所以需要通过取别名cid  pid来区分
+<select id="listLinkQuery" resultMap="CategoryBean">
+    select c.*,p.* ,c.id 'cid',p.id 'pid',c.name 'cname',p.name 'pname' from category_ left join product_ p on c.id = p.id
+<select/>
+多对一：
+指的是多个产品属于一个类别  比如香蕉 苹果都属于水果。
+用到了
+<association>
+</association>
+<根据ID查询product 关联orders查询出来  用left join 关联两个表>
+<select id="listProduct" resultMap="productBean">
+   select c.*,p.*,c.id 'cid',p.id 'pid',c.name 'cname',p.name 'pname'  from category_ c left join product_ p on c.id = p.id
+</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***********************************************
+算法
+***********************************************
+排序算法是为了将杂乱的数据按一定规则将其排列好。是数据得以快速检索，这就是排序的目的
+可以从时间，空间，稳定性来衡量算法的好坏
+如果排序不需要借助外部储存器，所有操作都在内存中完成，则称之为内部算法。
+如果参与排序的数据元素非常多，数据量非常大咋计算机必须借助外部储存器如磁盘  则这种排序可成为外部排序
+
+直接插入排序：
+算法思想：将无序的数据通过逐次比较变为有序的数据，每次比较时和目前最大或最小的数进行比较，若条件成立在和排好的其他数据用循环进行比较，直到最后排序完毕。
+最好时间复杂度o(n) 此时内层循环始终不成立
+最坏时间复杂度是O（n^2）此时内层循环始终成立 n*(n-1)/2
+平均时间复杂度是O（n^2）
+空间复杂度是O（1）辅助存储空间不随带排序列规模的变化而变化
+稳定性：稳定  当遇到相等的数字时不会改变原有的排序
+eg:举个例子吧，
+{0,11,9，’11‘};
+例子而稳定的应该是这样   为标记的’11‘  不是字符"11"
+{0,9，11, ’11‘ }
+折半插入排序：
+算法思想：是数据已经有序 然后插入数据排序  low high m=【（low+high）/2】下取整每次的low high m都会变化  循环条件就是low<high
+平均时间复杂度：O（n^2）折半插入排序适合关键字数较多的场景，
+时间最好情况：O（nlog2n）
+时间最差情况：O（n^2）
+空间复杂度是O（1）
+稳定性是稳定  例子和上述一致
+10.16总结:感觉自己进度很慢很无知，加油吧。后面尽可能快一点。时间上不能完全跟计划，后面尽量排除无关事件。
+
