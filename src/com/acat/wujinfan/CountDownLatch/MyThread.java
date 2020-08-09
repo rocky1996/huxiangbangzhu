@@ -27,13 +27,13 @@ public class MyThread extends Thread{
 
     @Override
     public void run() {
-        try{
-            begin.await();//每个选手都站在自己的跑跑道上,做好了比赛的准备，正在准备裁判鸣枪开始比赛
-            service.testMethod();//听到鸣枪后开始比赛
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }finally {
-            end.countDown();//其中的一个参赛选手已经开始跑完了
-        }
+//        try{
+//            begin.await();//每个选手都站在自己的跑跑道上,做好了比赛的准备，正在准备裁判鸣枪开始比赛
+//            service.testMethod();//听到鸣枪后开始比赛
+//        }catch (InterruptedException e){
+//            e.printStackTrace();
+//        }finally {
+//            end.countDown();//其中的一个参赛选手已经开始跑完了
+//        }
     }
 }

@@ -60,10 +60,24 @@ public class Main {
         System.out.println(strtemp);
     }
 
+//    public static boolean function(String str){
+//        if(str.length() == 0 || str == null){
+//            return false;
+//        }
+//        for(int i=0;i<str.length();i++){
+//            char ch = str.charAt(i);
+//            if(str.indexOf(ch) != str.lastIndexOf(ch)){
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
     public static boolean function(String str){
         if(str.length() == 0 || str == null){
             return false;
         }
+
         for(int i=0;i<str.length();i++){
             char ch = str.charAt(i);
             if(str.indexOf(ch) != str.lastIndexOf(ch)){

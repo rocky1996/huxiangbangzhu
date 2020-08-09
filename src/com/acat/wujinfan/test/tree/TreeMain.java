@@ -1,5 +1,6 @@
 package com.acat.wujinfan.test.tree;
 
+import sun.awt.image.ImageWatched;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.ArrayList;
@@ -22,17 +23,17 @@ public class TreeMain {
         TreeNode B = new TreeNode("B", D, E);
         TreeNode A = new TreeNode("A", B, C);
 
-//        System.out.println("先序遍历");
-//        TreeMain.FirstTraversal(A);
-//
+        System.out.println("先序遍历");
+        TreeMain.FirstTraversal(A);
+
 //        System.out.println("中序遍历");
 //        TreeMain.InOrderTraversal(A);
 //
 //        System.out.println("后序遍历");
 //        TreeMain.PostOrderTraversal(A);
 
-        System.out.println("层次遍历");
-        TreeMain.levelOrder(A);
+//        System.out.println("层次遍历");
+//        TreeMain.levelOrder(A);
 
 //        System.out.println("层次遍历(带换行)");
 //        TreeMain.BFSTraverseOne(A);
@@ -40,9 +41,7 @@ public class TreeMain {
 //        System.out.println("二叉树的左视图");
 //        TreeMain.BFSLeftTraverse(A);
 //
-//        System.out.println("层次遍历(带换行)");
-//        List<List<String>> list = TreeMain.levelOrderBottom(A);
-//        System.out.println(list);
+//iystem.out.println(list);
 //
 //        System.out.println("之字形打印");
 //        List<List<String>> list2 = TreeMain.zhizidayin(A);
@@ -103,30 +102,50 @@ public class TreeMain {
      *
      * @param root
      */
-    public static void levelOrder(TreeNode root) {
-        if (root == null) {
+//    public static void levelOrder(TreeNode root) {
+//        if (root == null) {
+//            return;
+//        }
+//        LinkedList<TreeNode> queue = new LinkedList<>();
+//        queue.offer(root);
+//
+//        TreeNode currentNode = null;
+//
+//        while (!queue.isEmpty()) {
+//            currentNode = queue.poll();
+//            printNode(currentNode);
+//
+//            if (currentNode.getLeftNode() != null) {
+//                queue.offer(currentNode.getLeftNode());
+//            }
+//            if (currentNode.getRightNode() != null) {
+//                queue.offer(currentNode.getRightNode());
+//            }
+//        }
+//    }
+    public static void levelOrder(TreeNode root){
+        if(root == null){
             return;
         }
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
         TreeNode currentNode = null;
-
-        while (!queue.isEmpty()) {
+        while(!queue.isEmpty()){
             currentNode = queue.poll();
             printNode(currentNode);
 
-            if (currentNode.getLeftNode() != null) {
+            if(currentNode.getLeftNode() != null){
                 queue.offer(currentNode.getLeftNode());
             }
-            if (currentNode.getRightNode() != null) {
+            if(currentNode.getRightNode() != null){
                 queue.offer(currentNode.getRightNode());
             }
         }
     }
 
     /**
-     * 层次遍历(不带换行)
+     * 层次遍历(带换行)
      * 可以使用队列实现二叉树的遍历，LinkedLsit可以看做是一个队列，offer和poll分别是进队列和出队列。队列先入先出的特性实现了层次遍历，先将根节点入队，
      * 进入循环（循环条件队列非空），首先从队列中取出一个节点（并打印数据），判断从队列中取出（这是重点）的节点是否有左右儿子，有的话依次入队列；如果队
      * 列非空，继续循环，从队列再弹出一个节点（并打印），判断该节点的节点是否有左右儿子，有的话依次入队列；每层遍历结束打印换行要通过两个引用lastNode、
@@ -135,10 +154,43 @@ public class TreeMain {
      *
      * @param root
      */
-    public static void BFSTraverseOne(TreeNode root) {
-        if (root == null) {
+//    public static void BFSTraverseOne(TreeNode root) {
+//        if (root == null) {
+//            return;
+//        }
+//        LinkedList<TreeNode> queue = new LinkedList<>();
+//        queue.offer(root);
+//
+//        TreeNode currentNode = null;
+//        TreeNode lastNode = root;
+//        TreeNode nextLevelLastNode = root;
+//
+//        while (!queue.isEmpty()) {
+//            currentNode = queue.poll();
+//            printNode(currentNode);
+//
+//            if (currentNode.getLeftNode() != null) {
+//                queue.offer(currentNode.getLeftNode());
+//                nextLevelLastNode = currentNode.getLeftNode();
+//            }
+//
+//            if (currentNode.getRightNode() != null) {
+//                queue.offer(currentNode.getRightNode());
+//                nextLevelLastNode = currentNode.getRightNode();
+//            }
+//
+//            if (lastNode == currentNode) {
+//                System.out.println();
+//                lastNode = nextLevelLastNode;
+//            }
+//        }
+//    }
+
+    public static void BFSTraverseOne(TreeNode root){
+        if(root == null){
             return;
         }
+
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
 
@@ -146,21 +198,21 @@ public class TreeMain {
         TreeNode lastNode = root;
         TreeNode nextLevelLastNode = root;
 
-        while (!queue.isEmpty()) {
+        while(!queue.isEmpty()){
             currentNode = queue.poll();
             printNode(currentNode);
 
-            if (currentNode.getLeftNode() != null) {
+            if(currentNode.getLeftNode() != null){
                 queue.offer(currentNode.getLeftNode());
                 nextLevelLastNode = currentNode.getLeftNode();
             }
 
-            if (currentNode.getRightNode() != null) {
+            if(currentNode.getRightNode() != null){
                 queue.offer(currentNode.getRightNode());
                 nextLevelLastNode = currentNode.getRightNode();
             }
 
-            if (lastNode == currentNode) {
+            if(lastNode == currentNode){
                 System.out.println();
                 lastNode = nextLevelLastNode;
             }
@@ -247,8 +299,46 @@ public class TreeMain {
      * 之字形打印
      * @param root
      */
+//    public static LinkedList<List<String>> zhizidayin(TreeNode root){
+//        LinkedList<List<String>> bigList = new LinkedList<>();
+//
+//        LinkedList<TreeNode> queue = new LinkedList<>();
+//        queue.offer(root);
+//
+//        TreeNode currentNode = null;
+//        boolean flag = true;
+//
+//        while(!queue.isEmpty()){
+//            List<String> list = new ArrayList<>();
+//            int size = queue.size();
+//
+//            for(int i=0;i<size;i++){
+//                currentNode = queue.poll();
+//                if(flag){
+//                    list.add(currentNode.getData());
+//                }else {
+//                    list.add(0,currentNode.getData());
+//                }
+//
+//                if(currentNode.getLeftNode() != null){
+//                    queue.offer(currentNode.getLeftNode());
+//                }
+//                if(currentNode.getRightNode() != null){
+//                    queue.offer(currentNode.getRightNode());
+//                }
+//            }
+//            bigList.add(list);
+//            flag = false;
+//        }
+//
+//        return bigList;
+//    }
+
     public static LinkedList<List<String>> zhizidayin(TreeNode root){
         LinkedList<List<String>> bigList = new LinkedList<>();
+        if(root == null){
+            return bigList;
+        }
 
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
@@ -278,7 +368,6 @@ public class TreeMain {
             bigList.add(list);
             flag = false;
         }
-
         return bigList;
     }
 }
